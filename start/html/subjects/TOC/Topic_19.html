@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_15.html">
+                    <li>Type of grammers</li>
+                </a>
+                <a href="Topic_16.html">
+                    <li>Derivation Tree</li>
+                </a>
+                <a href="Topic_17.html">
+                    <li> Ambiguity in grammar</li>
+                </a>
+                <a href="Topic_18.html">
+                    <li>Simplication of CFG</li>
+                </a>
+                <a href="Topic_19.html" class="active">
+                    <li>Chomsky's Normal Form (CNF)</li>
+                </a>
+                <a href="Topic_20.html">
+                    <li>Greibach Normal Form (GNF)</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Chomsky's Normal Form (CNF)</h1><br>
+            <p>CNF stands for Chomsky normal form. A CFG(context free grammar) is in CNF(Chomsky normal form) if all production rules satisfy one of the following conditions:</p><br>
+            <ul class="points">
+                <li>Start symbol generating &epsilon;. For example, A &rarr; &epsilon;.</li><br>
+                <li>A non-terminal generating two non-terminals. For example, S &rarr; AB.</li><br>
+                <li>A non-terminal generating a terminal. For example, S &rarr; a.</li><br>
+            </ul>
+            <h3 class="h3">For example:</h3><br>
+            <div class="codeblock">
+                <p>
+                    G1 = {S &rarr; AB, S &rarr; c, A &rarr; a, B &rarr; b}<br> G2 = {S &rarr; aA, A &rarr; a, B &rarr; c}<br>
+                </p>
+            </div><br>
+            <p>The production rules of Grammar G1 satisfy the rules specified for CNF, so the grammar G1 is in CNF. However, the production rule of Grammar G2 does not satisfy the rules specified for CNF as S &rarr; aZ contains terminal followed by non-terminal.
+                So the grammar G2 is not in CNF.</p><br>
+            <h2 class="h2">Steps for converting CFG into CNF</h2><br>
+            <p><strong>Step 1:</strong> Eliminate start symbol from the RHS. If the start symbol T is at the right-hand side of any production, create a new production as:</p><br>
+            <div class="codeblock">
+                <p>
+                    S1 &rarr; S
+                </p>
+            </div><br>
+            <p>Where S1 is the new start symbol.</p>
+            <p><strong>Step 2:</strong> In the grammar, remove the null, unit and useless productions. You can refer to the <a href="automata-simplification-of-cfg" target="_blank">Simplification of CFG</a>.</p><br>
+            <p><strong>Step 3:</strong> Eliminate terminals from the RHS of the production if they exist with other non-terminals or terminals. For example, production S &rarr; aA can be decomposed as:</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; RA</br>
+                    R &rarr; a</br>
+                </p>
+            </div>
+            </br>
+            <p><strong>Step 4:</strong> Eliminate RHS with more than two non-terminals. For example, S &rarr; ASB can be decomposed as:</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; RS</br>
+                    R &rarr; AS</br>
+                </p>
+            </div>
+            </br>
+            <h3 class="h3">Example:</h3>
+            </br>
+            <p>Convert the given CFG to CNF. Consider the given grammar G1:</p>
+            </br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; a | aA | B</br>
+                    A &rarr; aBB | &epsilon;</br>
+                    B &rarr; Aa | b</br>
+                </p>
+            </div>
+            </br>
+            <p><strong>Solution:</strong></p>
+            <p><strong>Step 1:</strong> We will create a new production S1 &rarr; S, as the start symbol S appears on the RHS. The grammar will be:</p><br>
+            <div class="codeblock">
+                <p>
+                    S1 &rarr; S</br>
+                    S &rarr; a | aA | B</br>
+                    A &rarr; aBB | &epsilon;</br>
+                    B &rarr; Aa | b</br>
+                </p>
+            </div>
+            </br>
+            <p><strong>Step 2:</strong> As grammar G1 contains A &rarr; &epsilon; null production, its removal from the grammar yields:</p><br>
+            <div class="codeblock">
+                <p>
+                    S1 &rarr; S S &rarr; a | aA | B A &rarr; aBB B &rarr; Aa | b | a
+                </p>
+            </div>
+            <p>Now, as grammar G1 contains Unit production S &rarr; B, its removal yield:</p>
+            </br>
+            <div class="codeblock">
+                <p>
+                    S1 &rarr; S</br>
+                    S &rarr; a | aA | Aa | b</br>
+                    A &rarr; aBB</br>
+                    B &rarr; Aa | b | a</br>
+                </p>
+            </div>
+            </br>
+            <p>Also remove the unit production S1 &rarr; S, its removal from the grammar yields:</p>
+            </br>
+            <div class="codeblock">
+                <p>
+                    S0 &rarr; a | aA | Aa | b</br>
+                    S &rarr; a | aA | Aa | b</br>
+                    A &rarr; aBB</br>
+                    B &rarr; Aa | b | a</br>
+                </p>
+            </div>
+            </br>
+            <p><strong>Step 3:</strong> In the production rule S0 &rarr; aA | Aa, S &rarr; aA | Aa, A &rarr; aBB and B &rarr; Aa, terminal a exists on RHS with non-terminals. So we will replace terminal a with X:</p>
+            </br>
+            <div class="codeblock">
+                <p>
+                    S0 &rarr; a | XA | AX | b</br>
+                    S &rarr; a | XA | AX | b</br>
+                    A &rarr; XBB</br>
+                    B &rarr; AX | b | a</br>
+                    X &rarr; a</br>
+                </p>
+            </div>
+            </br>
+            <p><strong>Step 4:</strong> In the production rule A &rarr; XBB, RHS has more than two symbols, removing it from grammar yield:</p>
+            </br>
+            <div class="codeblock">
+                <p>
+                    S0 &rarr; a | XA | AX | b</br>
+                    S &rarr; a | XA | AX | b</br>
+                    A &rarr; RB</br>
+                    B &rarr; AX | b | a</br>
+                    X &rarr; a</br>
+                    R &rarr; XB</br>
+                </p>
+            </div>
+            </br>
+            <p>Hence, for the given grammar, this is the required CNF.</p>
+            </br>
+        </div>
+    </div>
+</body>
+
+</html>

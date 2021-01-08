@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing all members</title>
+    <script>
+        let myCar = new Object();
+        myCar.model = 'Baleno';
+        myCar.year = 2014;
+        myCar.stereo = new Object();
+        myCar.stereo.name = 'Kenwood';
+        myCar.stereo.maxVol = 30;
+        for (key1 in myCar) {
+            if (typeof(myCar[key1]) == 'object') {
+                for (key2 in myCar[key1]) {
+                    console.log(`${key1}-${key2} = ${myCar[key1][key2]}`);
+                }
+            } else
+                console.log(`${key1} = ${myCar[key1]}`);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

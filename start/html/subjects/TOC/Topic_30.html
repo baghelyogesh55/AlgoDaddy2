@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_29.html">
+                    <li>Turing Machine</li>
+                </a>
+                <a href="Topic_30.html" class="active">
+                    <li>Variation of Turing Machine</li>
+                </a>
+                <a href="Topic_31.html">
+                    <li>NP Hard and NP-Complete Classes</li>
+                </a>
+                <a href="Topic_32.html">
+                    <li>Language Decidability</li>
+                </a>
+                <a href="Topic_33.html">
+                    <li>Undecidable Languages</li>
+                </a>
+                <a href="Topic_34.html">
+                    <li>Halting Problem</li>
+                </a>
+                <a href="Topic_35.html">
+                    <li>Post Correspondence Problem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1>Variation of Turing Machine</h1><br>
+            <p><strong>1. Multiple track Turing Machine:</strong></p><br>
+            <ul>
+                <li>A k-tack Turing machine(for some k&gt;0) has k-tracks and one R/W head that reads and writes all of them one by one.</li><br>
+                <li> A k-track Turing Machine can be simulated by a single track Turing machine</li><br>
+            </ul>
+            <p><strong>2. Two-way infinite Tape Turing Machine:</strong></p><br><br>
+            <ul>
+                <li>Infinite tape of two-way infinite tape Turing machine is unbounded in both directions left and right.</li><br>
+                <li> Two-way infinite tape Turing machine can be simulated by one-way infinite Turing machine(standard Turing machine).</li><br>
+            </ul>
+            <p><strong>3. Multi-tape Turing Machine:</strong></p><br>
+            <ul>
+                <li>It has multiple tapes and controlled by a single head.</li><br>
+                <li>The Multi-tape Turing machine is different from k-track Turing machine but expressive power is same.</li><br>
+                <li>Multi-tape Turing machine can be simulated by single-tape Turing machine.</li><br>
+            </ul>
+            <p><strong>4. Multi-tape Multi-head Turing Machine:</strong></p><br/>
+
+            <ul>
+                <li>The multi-tape Turing machine has multiple tapes and multiple heads</li><br>
+                <li>Each tape controlled by separate head</li><br>
+                <li>Multi-Tape Multi-head Turing machine can be simulated by standard Turing machine.</li><br>
+            </ul>
+            <p><strong>5. Multi-dimensional Tape Turing Machine:</strong></p><br>
+            <ul>
+                <li>It has multi-dimensional tape where head can move any direction that is left, right, up or down.</li><br>
+                <li>Multi dimensional tape Turing machine can be simulated by one-dimensional Turing machine</li><br>
+            </ul>
+            <p><strong>6. Multi-head Turing Machine:</strong></p><br>
+            <ul>
+                <li>A multi-head Turing machine contain two or more heads to read the symbols on the same tape.</li><br>
+                <li>In one step all the heads sense the scanned symbols and move or write independently.</li><br>
+                <li> Multi-head Turing machine can be simulated by single head Turing machine.</li><br>
+            </ul>
+            <p><strong>7. Non-deterministic Turing Machine:</strong></p><br>
+            <ul>
+                <li>A non-deterministic Turing machine has a single, one way infinite tape.</li><br>
+                <li>For a given state and input symbol has atleast one choice to move (finite number of choices for the next move), each choice several choices of path that it might follow for a given input string.</li><br>
+                <li>A non-deterministic Turing machine is equivalent to deterministic Turing machine.</li><br>
+            </ul>
+            <p></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav .act {
+            background: none;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_1.html">
+                    <li class="act">Introduction to Automata theory</li>
+                </a>
+                <a href="Topic_2.html">
+                    <li>Finite Automata</li>
+                </a>
+                <a href="Topic_3.html">
+                    <li>Moore Machine</li>
+                </a>
+                <a href="Topic_4.html">
+                    <li>Mealy Machine</li>
+                </a>
+                <a href="Topic_5.html" class="active">
+                    <li>Conversion of moore to mealy machine</li>
+                </a>
+                <a href="Topic_6.html">
+                    <li>Conversion of mealy to moore machine</li>
+                </a>
+                <a href="quiz.html">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div>
+            <div class="title5"></div>
+            <p class="p5">
+                <h1 class="h1" style="font-size: xx-large; font-style: oblique;">Conversion from Moore machine to Mealy Machine</h1><br>
+                <p>In the Moore machine, the output is associated with every state, and in the mealy machine, the output is given along the edge with input symbol. The equivalence of the Moore machine and Mealy machine means both the machines generate the
+                    same output string for same input string.</p>
+                <p>We cannot directly convert Moore machine to its equivalent Mealy machine because the length of the Moore machine is one longer than the Mealy machine for the given input. To convert Moore machine to Mealy machine, state output symbols
+                    are distributed into input symbol paths. We are going to use the following method to convert the Moore machine to Mealy machine.</p><br>
+                <h2 class="h2" style="font-size: xx-large; font-style: oblique;">Method for conversion of Moore machine to Mealy machine</h2><br>
+                <p>Let M = (Q, &sum;, &delta;, &lambda;, q0) be a Moore machine. The equivalent Mealy machine can be represented by M' = (Q, &sum;, &delta;, &lambda;', q0). The output function &lambda;' can be obtained as:</p>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q, a) = &lambda;(&delta;(q, a))
+                    </p>
+                </div><br>
+                <h3 class="h3">Example 1:</h3><br>
+                <p>Convert the following Moore machine into its equivalent Mealy machine.</p><br>
+                <img src="../../../images/con1.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+                <p><strong>Solution:</strong></p>
+                <p>The transition table of given Moore machine is as follows:</p><br>
+                <table class="alt">
+                    <tr>
+                        <th>Q</th>
+                        <th>a</th>
+                        <th>b</th>
+                        <th>Output(&lambda;)</th>
+                    </tr>
+                    <tr>
+                        <td>q0</td>
+                        <td>q0</td>
+                        <td>q1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>q1</td>
+                        <td>q0</td>
+                        <td>q1</td>
+                        <td>1</td>
+                    </tr>
+                </table><br>
+                <p>The equivalent Mealy machine can be obtained as follows:</p><br>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q0, a) = &lambda;(&delta;(q0, a)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &lambda;(q0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0 &lambda;' (q0, b) = &lambda;(&delta;(q0, b)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; = &lambda;(q1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 1
+                    </p>
+                </div><br>
+                <p>The &lambda; for state q1 is as follows:</p><br>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q1, a) = &lambda;(&delta;(q1, a)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &lambda;(q0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0 &lambda;' (q1, b) = &lambda;(&delta;(q1, b)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; = &lambda;(q1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 1
+                    </p>
+                </div><br>
+                <p>Hence the transition table for the Mealy machine can be drawn as follows:</p><br>
+                <img src="../../../images/con2.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+                <p>The equivalent Mealy machine will be,</p><br>
+                <img src="../../../images/con3.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+                <h4 class="n">Note: The length of output sequence is 'n+1' in Moore machine and is 'n' in the Mealy machine. </h4><br>
+                <h3 class="h3">Example 2:</h3><br>
+                <p>Convert the given Moore machine into its equivalent Mealy machine.</p><br>
+                <img src="../../../images/con4.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+                <p><strong>Solution:</strong></p>
+                <p>The transition table of given Moore machine is as follows:</p><br>
+                <table class="alt">
+                    <tr>
+                        <th>Q</th>
+                        <th>a</th>
+                        <th>b</th>
+                        <th>Output(&lambda;)</th>
+                    </tr>
+                    <tr>
+                        <td>q0</td>
+                        <td>q1</td>
+                        <td>q0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>q1</td>
+                        <td>q1</td>
+                        <td>q2</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>q2</td>
+                        <td>q1</td>
+                        <td>q0</td>
+                        <td>1</td>
+                    </tr>
+                </table><br>
+                <p>The equivalent Mealy machine can be obtained as follows:</p><br>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q0, a) = &lambda;(&delta;(q0, a)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &lambda;(q1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0 &lambda;' (q0, b) = &lambda;(&delta;(q0, b)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; = &lambda;(q0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0
+                    </p>
+                </div><br>
+                <p>The &lambda; for state q1 is as follows:</p><br>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q1, a) = &lambda;(&delta;(q1, a)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &lambda;(q1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0 &lambda;' (q1, b) = &lambda;(&delta;(q1, b)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; = &lambda;(q2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 1
+                    </p>
+                </div><br>
+                <p>The &lambda; for state q2 is as follows:</p><br>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q2, a) = &lambda;(&delta;(q2, a)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &lambda;(q1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0 &lambda;' (q2, b) = &lambda;(&delta;(q2, b)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; = &lambda;(q0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0
+                    </p>
+                </div><br>
+                <p>Hence the transition table for the Mealy machine can be drawn as follows:</p><br>
+                <img src="../../../images/con5.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+                <p>The equivalent Mealy machine will be,</p><br>
+                <img src="../../../images/con6.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+                <h3 class="h3">Example 3:</h3><br>
+                <p>Convert the given Moore machine into its equivalent Mealy machine.</p><br>
+                <table class="alt">
+                    <tr>
+                        <th>Q</th>
+                        <th>a</th>
+                        <th>b</th>
+                        <th>Output(&lambda;)</th>
+                    </tr>
+                    <tr>
+                        <td>q0</td>
+                        <td>q0</td>
+                        <td>q1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>q1</td>
+                        <td>q2</td>
+                        <td>q0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>q2</td>
+                        <td>q1</td>
+                        <td>q2</td>
+                        <td>2</td>
+                    </tr>
+                </table><br>
+                <p><strong>Solution:</strong></p>
+                <p>The transaction diagram for the given problem can be drawn as:</p><br>
+                <img src="../../../images/con7.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+                <p>The equivalent Mealy machine can be obtained as follows:</p><br>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q0, a) = &lambda;(&delta;(q0, a)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &lambda;(q0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0 &lambda;' (q0, b) = &lambda;(&delta;(q0, b)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; = &lambda;(q1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 1
+                    </p>
+                </div><br>
+                <p>The &lambda; for state q1 is as follows:</p>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q1, a) = &lambda;(&delta;(q1, a)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &lambda;(q2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 2 &lambda;' (q1, b) = &lambda;(&delta;(q1, b)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; = &lambda;(q0) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 0
+                    </p>
+                </div><br>
+                <p>The &lambda; for state q2 is as follows:</p>
+                <div class="codeblock">
+                    <p>
+                        &lambda;' (q2, a) = &lambda;(&delta;(q2, a)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = &lambda;(q1) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 1 &lambda;' (q2, b) = &lambda;(&delta;(q2, b)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp; &nbsp; = &lambda;(q2) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = 2
+                    </p>
+                </div><br>
+                <p>Hence the transition table for the Mealy machine can be drawn as follows:</p><br>
+                <img src="../../../images/con8.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+                <p>The equivalent Mealy machine will be,</p><br>
+                <img src="../../../images/con9.png" alt="Conversion from Moore machine to Mealy Machine" /><br>
+
+            </p>
+        </div>
+    </div>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_23.html" class="active">
+                    <li>Pushdown Automata(PDA)</li>
+                </a>
+                <a href="Topic_24.html">
+                    <li>Non-deterministic Pushdown Automata</li>
+                </a>
+                <a href="Topic_25.html">
+                    <li>CFG to PDA Conversion</li>
+                </a>
+                <a href="Topic_26.html">
+                    <li>CFG equivalent to PDA</li>
+                </a>
+
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Pushdown Automata(PDA)</h1><br>
+            <ul class="points">
+                <li>Pushdown automata is a way to implement a CFG in the same way we design DFA for a regular grammar. A DFA can remember a finite amount of information, but a PDA can remember an infinite amount of information.</li><br>
+                <li>Pushdown automata is simply an NFA augmented with an "external stack memory". The addition of stack is used to provide a last-in-first-out memory management capability to Pushdown automata. Pushdown automata can store an unbounded amount
+                    of information on the stack. It can access a limited amount of information on the stack. A PDA can push an element onto the top of the stack and pop off an element from the top of the stack. To read an element into the stack, the top
+                    elements must be popped off and are lost.</li><br>
+                <li>A PDA is more powerful than FA. Any language which can be acceptable by FA can also be acceptable by PDA. PDA also accepts a class of language which even cannot be accepted by FA. Thus PDA is much more superior to FA.</li><br>
+            </ul><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/pushdown-automata.png" alt="Pushdown Automata" /><br>
+            <h2 class="h2">PDA Components:</h2><br>
+            <p><strong>Input tape:</strong> The input tape is divided in many cells or symbols. The input head is read-only and may only move from left to right, one symbol at a time.</p><br>
+            <p><strong>Finite control:</strong> The finite control has some pointer which points the current symbol which is to be read.</p><br>
+            <p><strong>Stack:</strong> The stack is a structure in which we can push and remove the items from one end only. It has an infinite size. In PDA, the stack is used to store the items temporarily.</p><br>
+            <h2 class="h2">Formal definition of PDA:</h2><br>
+            <p>The PDA can be defined as a collection of 7 components:</p><br>
+            <p><strong>Q:</strong> the finite set of states</p><br>
+            <p><strong>&sum;:</strong> the input set</p><br>
+            <p><strong>&Gamma;:</strong> a stack symbol which can be pushed and popped from the stack</p><br>
+            <p><strong>q0:</strong> the initial state</p><br>
+            <p><strong>Z:</strong> a start symbol which is in &Gamma;.</p><br>
+            <p><strong>F:</strong> a set of final states</p><br>
+            <p><strong>&delta;:</strong> mapping function which is used for moving from current state to next state.</p><br>
+            <h2 class="h2">Instantaneous Description (ID)</h2><br>
+            <p>ID is an informal notation of how a PDA computes an input string and make a decision that string is accepted or rejected.</p><br>
+            <p><strong>An instantaneous description is a triple (q, w, &alpha;) where:</strong></p><br>
+            <p><strong>q</strong> describes the current state.</p><br>
+            <p><strong>w</strong> describes the remaining input.</p><br>
+            <p><strong>&alpha;</strong> describes the stack contents, top at the left.</p><br>
+            <h2 class="h2">Turnstile Notation:</h2><br>
+            <p>&#8866; sign describes the turnstile notation and represents one move.</p><br>
+            <p>&#8866;* sign describes a sequence of moves.</p><br>
+            <p><strong>For example,</strong></p><br>
+            <p>(p, b, T) &#8866; (q, w, &alpha;)</p><br>
+            <p>In the above example, while taking a transition from state p to q, the input symbol 'b' is consumed, and the top of the stack 'T' is represented by a new string &alpha;.</p><br>
+            <h3 class="h3">Example 1:</h3><br>
+            <p>Design a PDA for accepting a language {a<sup>n</sup>b<sup>2n</sup> | n>=1}.</p><br>
+            <p><strong>Solution:</strong> In this language, n number of a's should be followed by 2n number of b's. Hence, we will apply a very simple logic, and that is if we read single 'a', we will push two a's onto the stack. As soon as we read 'b' then
+                for every single 'b' only one 'a' should get popped from the stack.</p><br>
+            <p>The ID can be constructed as follows:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q0, a, Z) = (q0, aaZ)<br> &delta;(q0, a, a) = (q0, aaa)<br>
+                </p>
+            </div><br>
+            <p>Now when we read b, we will change the state from q0 to q1 and start popping corresponding 'a'. Hence,</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q0, b, a) = (q1, &epsilon;)
+                </p>
+            </div><br>
+            <p>Thus this process of popping 'b' will be repeated unless all the symbols are read. Note that popping action occurs in state q1 only.</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q1, b, a) = (q1, &epsilon;)
+                </p>
+            </div><br>
+            <p>After reading all b's, all the corresponding a's should get popped. Hence when we read &epsilon; as input symbol then there should be nothing in the stack. Hence the move will be:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q1, &epsilon;, Z) = (q2, &epsilon;)
+                </p>
+            </div><br>
+            <p>Where</p><br>
+            <p>PDA = ({q0, q1, q2}, {a, b}, {a, Z}, &delta;, q0, Z, {q2})</p><br>
+            <p>We can summarize the ID as:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q0, a, Z) = (q0, aaZ)<br> &delta;(q0, a, a) = (q0, aaa)<br> &delta;(q0, b, a) = (q1, &epsilon;)<br> &delta;(q1, b, a) = (q1, &epsilon;)<br> &delta;(q1, &epsilon;, Z) = (q2, &epsilon;)<br>
+                </p>
+            </div><br>
+            <p>Now we will simulate this PDA for the input string "aaabbbbbb".</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q0, aaabbbbbb, Z) &#8866; &delta;(q0, aabbbbbb, aaZ)<br> &#8866; &delta;(q0, abbbbbb, aaaaZ)<br> &#8866; &delta;(q0, bbbbbb, aaaaaaZ)<br> &#8866; &delta;(q1, bbbbb, aaaaaZ)<br> &#8866; &delta;(q1, bbbb, aaaaZ)<br> &#8866; &delta;(q1,
+                    bbb, aaaZ)<br> &#8866; &delta;(q1, bb, aaZ)<br> &#8866; &delta;(q1, b, aZ)<br> &#8866; &delta;(q1, &epsilon;, Z)<br> &#8866; &delta;(q2, &epsilon;) <br> ACCEPT
+                    <br>
+                </p>
+            </div><br>
+            <h3 class="h3">Example 2:</h3><br>
+            <p>Design a PDA for accepting a language {0<sup>n</sup>1<sup>m</sup>0<sup>n</sup> | m, n>=1}.</p><br>
+            <p><strong>Solution:</strong> In this PDA, n number of 0's are followed by any number of 1's followed n number of 0's. Hence the logic for design of such PDA will be as follows:</p><br>
+            <p>Push all 0's onto the stack on encountering first 0's. Then if we read 1, just do nothing. Then read 0, and on each read of 0, pop one 0 from the stack.</p><br>
+            <p><strong>For instance:</strong></p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/pushdown-automata2.png" alt="Pushdown Automata" /><br>
+            <p><strong>This scenario can be written in the ID form as:</strong></p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q0, 0, Z) = &delta;(q0, 0Z)<br> &delta;(q0, 0, 0) = &delta;(q0, 00)<br> &delta;(q0, 1, 0) = &delta;(q1, 0)<br> &delta;(q0, 1, 0) = &delta;(q1, 0)<br> &delta;(q1, 0, 0) = &delta;(q1, &epsilon;)<br> &delta;(q0, &epsilon;, Z)
+                    = &delta;(q2, Z) (ACCEPT state)<br>
+                </p>
+            </div><br>
+            <p>Now we will simulate this PDA for the input string "0011100".</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q0, 0011100, Z) &#8866; &delta;(q0, 011100, 0Z)<br> &#8866; &delta;(q0, 11100, 00Z)<br> &#8866; &delta;(q0, 1100, 00Z)<br> &#8866; &delta;(q1, 100, 00Z)<br> &#8866; &delta;(q1, 00, 00Z)<br> &#8866; &delta;(q1, 0, 0Z)<br> &#8866;
+                    &delta;(q1, &epsilon;, Z)<br> &#8866; &delta;(q2, Z)<br> ACCEPT
+                    <br>
+                </p>
+            </div><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "algodaddy",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

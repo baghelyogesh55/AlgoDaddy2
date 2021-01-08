@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>CFG to PDA Conversion</title>
+    <link rel="icon" href="../../../images/logo.svg" type="image/gif">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/style copy.css" type="text/css" />
+    <link rel="stylesheet" href="../page.css" type="text/css" />
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+    <script src="../../../js/firebase.js"></script>
+    <script src="check.js"></script>
+
+
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+
+            // make it as accordion for smaller screens
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        }); // jquery end
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top">
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto " href="../../../index.html"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a>
+        <button class="navbar-toggler align-self-start" id="btnToggle" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end  p-3 p-lg-0 mt-5 mt-lg-0 mobileMenu" id="main_nav">
+
+            <ul class="navbar-nav mr-auto align-self-stretch">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i><span> Categories</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">College Course &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../../college/first_year.html">First Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/second_year.html">Second Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/third_year.html"> Third Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/fourth_year.html"> Fourth Year</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Extra &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">App Development</a></li>
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Languages &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">C</a></li>
+                                <li><a class="dropdown-item" href="#">C++</a></li>
+                                <li><a class="dropdown-item" href="#">Java</a></li>
+                                <li><a class="dropdown-item" href="#">Python</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-graduation-cap"></i><span> Placements</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../../placements/Interview Tips.html">Interview Tips</a></li>
+                        <li><a class="dropdown-item" href="../../placements/HR Interview Questions.html">HR Interview Questions</a></li>
+                        <li><a class="dropdown-item" href="../../placements/TCS.html">TCS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-book"></i><span> Exams</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../../exams/gate.html">Gate</a></li>
+                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="../../about/aboutUs.html">
+                        <i class="fa fa-user"></i><span> About Us</span></a>
+                </li>
+
+            </ul>
+
+
+            <ul class="navbar-nav navbar-right" id="loginul">
+                <li class="nav-item profileSignIn">
+                    <a class="nav-link text-white" href="../../login/login.html?#"><img src="../../../images/user2.png" height="40px" width="40px" />Sign In</a>
+                </li>
+                <li class="nav-item dropdown profileName" style="display: none;">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <img id="userPic" height="40px" width="40px" />
+                        <span id="userName"> Name</span></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="../../login/profile.html">My Profile</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="Logout();">Logout</a></li>
+                    </ul>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- navbar-collapse.// -->
+    </nav>
+
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_23.html">
+                    <li>Pushdown Automata(PDA)</li>
+                </a>
+                <a href="Topic_24.html">
+                    <li>Non-deterministic Pushdown Automata</li>
+                </a>
+                <a href="Topic_25.html" class="active">
+                    <li>CFG to PDA Conversion</li>
+                </a>
+                <a href="Topic_26.html">
+                    <li>CFG equivalent to PDA</li>
+                </a>
+                <a href="#" onclick="checkModule4();">
+                    <li>Practice / Quiz</li>
+                </a>
+                <br><br><br>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="content1">
+            <h1>CFG to PDA Conversion</h1><br>
+            <p>The first symbol on R.H.S. production must be a terminal symbol. The following steps are used to obtain PDA from CFG is:</p><br>
+            <p><strong>Step 1:</strong> Convert the given productions of CFG into GNF.</p><br>
+            <p><strong>Step 2:</strong> The PDA will only have one state {q}.</p><br>
+            <p><strong>Step 3:</strong> The initial symbol of CFG will be the initial symbol in the PDA.</p><br>
+            <p><strong>Step 4:</strong> For non-terminal symbol, add the following rule:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q, &epsilon;, A) = (q, &alpha;)
+                </p>
+            </div><br>
+            <p>Where the production rule is A &rarr; &alpha;</p><br>
+            <p><strong>Step 5:</strong> For each terminal symbols, add the following rule:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q, a, a) = (q, &epsilon;) for every terminal symbol
+                </p>
+            </div><br>
+            <h3 class="h3">Example 1:</h3><br>
+            <p>Convert the following grammar to a PDA that accepts the same language.</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; 0S1 | A<br> A &rarr; 1A0 | S | &epsilon;<br>
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>The CFG can be first simplified by eliminating unit productions:</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; 0S1 | 1S0 | &epsilon;
+                </p>
+            </div><br>
+            <p>Now we will convert this CFG to GNF:</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; 0SX | 1SY | &epsilon;<br> X &rarr; 1<br> Y &rarr; 0<br>
+                </p>
+            </div><br>
+            <p>The PDA can be:</p><br>
+            <div class="codeblock"><pre>
+            <strong>R1:</strong> &delta;(q, &epsilon;, S) = {(q, 0SX) | (q, 1SY) | (q, &epsilon;)}<br>
+            <strong>R2:</strong> &delta;(q, &epsilon;, X) = {(q, 1)}<br>
+            <strong>R3:</strong> &delta;(q, &epsilon;, Y) = {(q, 0)}<br>
+            <strong>R4:</strong> &delta;(q, 0, 0) = {(q, &epsilon;)}<br>
+            <strong>R5:</strong> &delta;(q, 1, 1) = {(q, &epsilon;)}<br>
+            </pre></div>
+            <h3 class="h3">Example 2:</h3><br>
+            <p>Construct PDA for the given CFG, and test whether 0104 is acceptable by this PDA.</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; 0BB<br> B &rarr; 0S | 1S | 0<br>
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>The PDA can be given as:</p><br>
+            <div class="codeblock">
+                <p>
+                    A = {(q), (0, 1), (S, B, 0, 1), &delta;, q, S, ?}
+                </p>
+            </div><br>
+            <p>The production rule &delta; can be:</p><br>
+            <div class="codeblock"><pre>
+            <strong>R1:</strong> &delta;(q, &epsilon;, S) = {(q, 0BB)}<br>
+            <strong>R2:</strong> &delta;(q, &epsilon;, B) = {(q, 0S) | (q, 1S) | (q, 0)}<br>
+            <strong>R3:</strong> &delta;(q, 0, 0) = {(q, &epsilon;)}<br>
+            <strong>R4:</strong> &delta;(q, 1, 1) = {(q, &epsilon;)}<br>
+            </pre></div><br>
+            <p>Testing 010<sup>4</sup> i.e. 010000 against PDA:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q, 010000, S) &#8866; &delta;(q, 010000, 0BB)<br> &#8866; &delta;(q, 10000, BB) R1<br> &#8866; &delta;(q, 10000,1SB) R3 <br> &#8866; &delta;(q, 0000, SB) R2 <br> &#8866; &delta;(q, 0000, 0BBB) R1 <br> &#8866; &delta;(q, 000,
+                    BBB) R3 <br> &#8866; &delta;(q, 000, 0BB) R2 <br> &#8866; &delta;(q, 00, BB) R3 <br> &#8866; &delta;(q, 00, 0B) R2 <br> &#8866; &delta;(q, 0, B) R3 <br> &#8866; &delta;(q, 0, 0) R2<br> &#8866; &delta;(q, &epsilon;) R3 <br> ACCEPT
+                </p>
+            </div><br>
+            <p>Thus 010<sup>4</sup> is accepted by the PDA.</p><br>
+            <h3 class="h3">Example 3:</h3><br>
+            <p>Draw a PDA for the CFG given below:</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; aSb<br> S &rarr; a | b | &epsilon;<br>
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>The PDA can be given as:</p><br>
+            <div class="codeblock">
+                <p>
+                    P = {(q), (a, b), (S, a, b, z0), &delta;, q, z0, q}
+                </p>
+            </div><br>
+            <p>The mapping function &delta; will be:</p><br>
+            <div class="codeblock"><pre>
+            <strong>R1:</strong> &delta;(q, &epsilon;, S) = {(q, aSb)}<br>
+            <strong>R2:</strong> &delta;(q, &epsilon;, S) = {(q, a) | (q, b) | (q, &epsilon;)}<br>
+            <strong>R3:</strong> &delta;(q, a, a) = {(q, &epsilon;)}<br>
+            <strong>R4:</strong> &delta;(q, b, b) = {(q, &epsilon;)}<br>
+            <strong>R5:</strong> &delta;(q, &epsilon;, z0) = {(q, &epsilon;)}<br>
+            </pre></div><br>
+            <p><strong>Simulation:</strong> Consider the string aaabb</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q, &epsilon;aaabb, S) &#8866; &delta;(q, aaabb, aSb) R3<br> &#8866; &delta;(q, &epsilon;aabb, Sb) R1 <br> &#8866; &delta;(q, aabb, aSbb) R3<br> &#8866; &delta;(q, &epsilon;abb, Sbb) R2<br> &#8866; &delta;(q, abb, abb) R3<br>                    &#8866; &delta;(q, bb, bb) R4<br> &#8866; &delta;(q, b, b) R4<br> &#8866; &delta;(q, &epsilon;, z0) R5<br> &#8866; &delta;(q, &epsilon;)<br> ACCEPT
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".navbar-toggler").on("click", function() {
+                $(".mobileMenu").toggleClass("open");
+            })
+        });
+    </script>
+</body>
+
+</html>

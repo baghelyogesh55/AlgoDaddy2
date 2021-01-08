@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_15.html">
+                    <li>Type of grammers</li>
+                </a>
+                <a href="Topic_16.html">
+                    <li>Derivation Tree</li>
+                </a>
+                <a href="Topic_17.html">
+                    <li> Ambiguity in grammar</li>
+                </a>
+                <a href="Topic_18.html" class="active">
+                    <li>Simplication of CFG</li>
+                </a>
+                <a href="Topic_19.html">
+                    <li>Chomsky's Normal Form (CNF)</li>
+                </a>
+                <a href="Topic_20.html">
+                    <li>Greibach Normal Form (GNF)</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Simplification of CFG</h1><br>
+            <p>As we have seen, various languages can efficiently be represented by a context-free grammar. All the grammar are not always optimized that means the grammar may consist of some extra symbols(non-terminal). Having extra symbols, unnecessary
+                increase the length of grammar. Simplification of grammar means reduction of grammar by removing useless symbols. The properties of reduced grammar are given below:</p><br>
+            <ol class="points">
+                <li>Each variable (i.e. non-terminal) and each terminal of G appears in the derivation of some word in L.</li>
+                <li>There should not be any production as X &rarr; Y where X and Y are non-terminal.</li>
+                <li>If &epsilon; is not in the language L then there need not to be the production X &rarr; &epsilon;.</li>
+            </ol>
+            <p>Let us study the reduction process in detail./p>
+                <img src="https://static.javatpoint.com/tutorial/automata/images/automata-simplification-of-cfg.png" alt="Simplification of CFG" /><br>
+                <h2 class="h2">Removal of Useless Symbols</h2>
+                <p>A symbol can be useless if it does not appear on the right-hand side of the production rule and does not take part in the derivation of any string. That symbol is known as a useless symbol. Similarly, a variable can be useless if it does
+                    not take part in the derivation of any string. That variable is known as a useless variable.</p>
+                <h3 class="h3">For Example:</h3>
+                <div class="codeblock">
+                    <p>
+                        T &rarr; aaB | abA | aaT A &rarr; aA B &rarr; ab | b C &rarr; ad
+                    </p>
+                </div>
+                <p>In the above example, the variable 'C' will never occur in the derivation of any string, so the production C &rarr; ad is useless. So we will eliminate it, and the other productions are written in such a way that variable C can never reach
+                    from the starting variable 'T'.</p><br>
+                <p>Production A &rarr; aA is also useless because there is no way to terminate it. If it never terminates, then it can never produce a string. Hence this production can never take part in any derivation.</p><br>
+                <p>To remove this useless production A &rarr; aA, we will first find all the variables which will never lead to a terminal string such as variable 'A'. Then we will remove all the productions in which the variable 'B' occurs.</p><br>
+                <h2 class="h2">Elimination of &epsilon; Production</h2><br>
+                <p>The productions of type S &rarr; &epsilon; are called &epsilon; productions. These type of productions can only be removed from those grammars that do not generate &epsilon;.</p><br>
+                <p><strong>Step 1:</strong> First find out all nullable non-terminal variable which derives &epsilon;.</p><br>
+                <p><strong>Step 2:</strong> For each production A &rarr; a, construct all production A &rarr; x, where x is obtained from a by removing one or more non-terminal from step 1.</p><br>
+                <p><strong>Step 3:</strong> Now combine the result of step 2 with the original production and remove &epsilon; productions.</p><br>
+                <h3 class="h3">Example:</h3><br>
+                <p>Remove the production from the following CFG by preserving the meaning of it.</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; XYX X &rarr; 0X | &epsilon; Y &rarr; 1Y | &epsilon;
+                    </p>
+                </div><br>
+                <p><strong>Solution:</strong></p>
+                <p>Now, while removing &epsilon; production, we are deleting the rule X &rarr; &epsilon; and Y &rarr; &epsilon;. To preserve the meaning of CFG we are actually placing &epsilon; at the right-hand side whenever X and Y have appeared.</p><br>
+                <p>Let us take</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; XYX
+                    </p>
+                </div><br>
+                <p>If the first X at right-hand side is &epsilon;. Then</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; YX
+                    </p>
+                </div><br>
+                <p>Similarly if the last X in R.H.S. = &epsilon;. Then</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; XY
+                    </p>
+                </div><br>
+                <p>If Y = &epsilon; then</p>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; XX
+                    </p>
+                </div><br>
+                <p>If Y and X are &epsilon; then,</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; X
+                    </p>
+                </div><br>
+                <p>If both X are replaced by &epsilon;</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; Y
+                    </p>
+                </div><br>
+                <p>Now,</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; XY | YX | XX | X | Y
+                    </p>
+                </div><br>
+                <p>Now let us consider</p><br>
+                <div class="codeblock">
+                    <p>
+                        X &rarr; 0X
+                    </p>
+                </div><br>
+                <p>If we place &epsilon; at right-hand side for X then,</p><br>
+                <div class="codeblock">
+                    <p>
+                        X &rarr; 0<br> X &rarr; 0X | 0
+                        </tp>
+                </div><br>
+                <p>Similarly Y &rarr; 1Y | 1</p><br>
+                <p>Collectively we can rewrite the CFG with removed &epsilon; production as</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; XY | YX | XX | X | Y<br> X &rarr; 0X | 0<br> Y &rarr; 1Y | 1<br>
+                    </p>
+                </div><br>
+                <h2 class="h2">Removing Unit Productions</h2><br>
+                <p>The unit productions are the productions in which one non-terminal gives another non-terminal. Use the following steps to remove unit production:</p><br>
+                <p><strong>Step 1:</strong> To remove X &rarr; Y, add production X &rarr; a to the grammar rule whenever Y &rarr; a occurs in the grammar.</p><br>
+                <p><strong>Step 2:</strong> Now delete X &rarr; Y from the grammar.</p><br>
+                <p><strong>Step 3:</strong> Repeat step 1 and step 2 until all unit productions are removed.</p><br>
+                <h3 class="h3">For example:</h3><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; 0A | 1B | C<br> A &rarr; 0S | 00<br> B &rarr; 1 | A<br> C &rarr; 01<br>
+                    </p>
+                </div><br>
+                <p><strong>Solution:</strong></p><br>
+                <p>S &rarr; C is a unit production. But while removing S &rarr; C we have to consider what C gives. So, we can add a rule to S.</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; 0A | 1B | 01
+                    </p>
+                </div><br>
+                <p>Similarly, B &rarr; A is also a unit production so we can modify it as</p><br>
+                <div class="codeblock">
+                    <p>
+                        B &rarr; 1 | 0S | 00
+                    </p>
+                </div><br>
+                <p>Thus finally we can write CFG without unit production as</p><br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; 0A | 1B | 01<br> A &rarr; 0S | 00<br> B &rarr; 1 | 0S | 00<br> C &rarr; 01<br>
+                        </textarea>
+                </div><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

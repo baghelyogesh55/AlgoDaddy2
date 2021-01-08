@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_29.html">
+                    <li>Turing Machine</li>
+                </a>
+                <a href="Topic_30.html">
+                    <li>Variation of Turing Machine</li>
+                </a>
+                <a href="Topic_31.html">
+                    <li>NP Hard and NP-Complete Classes</li>
+                </a>
+                <a href="Topic_32.html">
+                    <li>Language Decidability</li>
+                </a>
+                <a href="Topic_33.html">
+                    <li>Undecidable Languages</li>
+                </a>
+                <a href="Topic_34.html">
+                    <li>Halting Problem</li>
+                </a>
+                <a href="Topic_35.html" class="active">
+                    <li>Post Correspondence Problem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1>Post Correspondence Problem
+                <</h1>
+                    <p><strong>Post Correspondence Problem</strong> is a popular <a href="https://www.geeksforgeeks.org/decidable-and-undecidable-problems-in-theory-of-computation/" rel="noopener" target="_blank">undecidable problem</a> that was introduced
+                        by Emil Leon Post in 1946. It is simpler than Halting Problem. </p><br>
+                    <p>In this problem we have N number of <strong>Dominos</strong> (tiles). The aim is to arrange tiles in such order that string made by Numerators is same as string made by Denominators.<br /> In simple words, lets assume we have two lists
+                        both containing N words, aim is to find out concatenation of these words in some sequence such that both lists yield same result. </p><br>
+                    <p>Let&#8217;s try understanding this by taking two <strong>lists</strong> <strong>A</strong> and <strong>B</strong> </p><br>
+                    <pre>A=[aa, bb, abb] and B=[aab, ba, b] </pre><br>
+                    <p>Now for sequence 1, 2, 1, 3 first list will yield aabbaaabb and second list will yield same string aabbaaabb.<br /> So the solution to this PCP becomes 1, 2, 1, 3. </p><br>
+                    <p>Post Correspondence Problems can be represented in two ways:</p><br/>
+
+                    <p><b>1. Domino&#8217;s Form :</b></p>
+                    <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200525173708/dominos.jpg" width="924" height="437" class="aligncenter size-full" /></p><br>
+                    <p><b>2. Table Form :</b></p>
+                    <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200525173712/tf.jpg" width="852" height="529" class="aligncenter size-full" /></p><br>
+                    <p>
+                        </br><br /> Lets consider following examples.</p><br>
+                    <p><strong>Example-1:</strong></p><br>
+                    <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200525173710/exd.jpg" width="903" height="588" class="aligncenter size-full" /></p><br>
+                    <p><strong>Explanation &#8211;</strong> </p><br/>
+
+                    <ul>
+                        <li><b>Step-1:</b><br /> We will start with tile in which numerator and denominator are starting with same number, so we can start with either 1 or 2.<br /> Lets go with <strong>second</strong> tile, string made by numerator- 10111,
+                            string made by denominator is 10.</p><br>
+                        </li>
+                        <li><b>Step-2:</b><br /> We need 1s in denominator to match 1s in numerator so we will go with <strong>first</strong> tile, string made by numerator is 10111 1, string made by denominator is 10 111.</p><br>
+                        </li>
+                        <li><b>Step-3:</b><br /> There is extra 1 in numerator to match this 1 we will add <strong>first</strong> tile in sequence, string made by numerator is now 10111 1 1, string made by denominator is 10 111 111.</p><br>
+                        </li>
+                        <li><b>Step-4:</b><br /> Now there is extra 1 in denominator to match it we will add <strong>third</strong> tile, string made by numerator is 10111 1 1 10, string made by denominator is 10 111 111 0.</p><br>
+                            <pre>Final Solution - 2 1 1 3
+            String made by numerators: 101111110
+            String made by denominators: 101111110 </pre>
+                            <p>As you can see, strings are same.
+                        </li>
+                    </ul>
+                    <p>
+                        </br><br />
+                        <strong>Example-2:</strong></p><br>
+                    <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200525173711/exund.jpg" width="774" height="498" class="aligncenter size-full" /></p><br>
+                    <p><strong>Explanation &#8211;</strong></p><br>
+                    <ul>
+                        <li><b>Step-1:</b><br /> We will start from tile <strong>1</strong> as it is our only option, string made by numerator is 100, string made by denominator is 1.</p><br>
+                        </li>
+                        <li><b>Step-2:</b><br /> We have extra 00 in numerator, to balance this only way is to add tile <strong>3</strong> to sequence, string made by numerator is 100 1, string made by denominator is 1 00.</p><br>
+                        </li>
+                        <li><b>Step-3:</b><br /> There is extra 1 in numerator to balance we can either add tile <strong>1</strong> or tile <strong>2</strong>. Lets try adding tile 1 first, string made by numerator is 100 1 100, string made by denominator
+                            is 1 00 1.
+                            </p><br/>
+
+                        </li>
+                        <li><b>Step-4:</b><br /> There is extra 100 in numerator, to balance this we can add <strong>1st tile</strong> again, string made by numerator is 100 1 100 100, string made by denominator is 1 00 1 1 1. The 6th digit in numerator string
+                            is 0 which is different from 6th digit in string made by denominator which is 1.
+                        </li>
+                    </ul>
+                    <p>We can try unlimited combinations like one above but none of combination will lead us to solution, thus this problem does not have solution.</p><br>
+                    <p><b>Undecidability of Post Correspondence Problem :</b><br /> As theorem says that PCP is undecidable. That is, there is no particular algorithm that determines whether any Post Correspondence System has solution or not.</p>
+                    <p><strong>Proof &#8211;</strong><br /> We already know about undecidablitiy of Turing Machine. If we are able to reduce <a href="https://www.geeksforgeeks.org/turing-machine-in-toc/" rel="noopener" target="_blank">Turing Machine</a>                        to PCP then we will prove that PCP is undecidable as well.</p><br>
+                    <p>Consider Turing machine M to simulate PCP’s input string w can be represented as .</p><br>
+                    <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200528153301/tm.jpg" width="546" height="119" class="aligncenter size-full" /></p><br>
+                    <p>If there is match in input string w, then Turing machine M halts in accepting state. This halting state of Turing machine is acceptance problem A<sub>TM</sub>.<br /> We know that acceptance problem A<sub>TM</sub> is undecidable. Therefore
+                        PCP problem is also undecidable.</p><br>
+                    <p>To force simulation of M, we make 2 modifications to Turing Machine M and one change to our PCP problem.</p><br>
+                    <ol>
+                        <li>M on input w can never attempt to move tape head beyond left end of input tape.
+                        </li><br>
+                        <li>If input is empty string € we use _ .
+                        </li><br>
+                        <li>PCP problem starts match with first domino [u1/v1] This is called Modified PCP problem.<br>
+                            <pre>MPCP = {[D] | D is instance of PCP starts with first domino} </pre>
+                        </li><br>
+                    </ol>
+                    <p><strong>Construction Steps &#8211;</strong></p><br>
+                    <ol>
+                        <li>Put [# / (#q0w1w2..wn#)] into D as first domino, where is instance of D is MPCP. A partial match is obtained in first domino is # at one face is same #symbol in other face.
+                        </li><br>
+                        <li>Transition functions for Turing Machine M can have moves Left L, Right R. For every x, y z in tape alphabets and q, r in Q where q is not equal to q<sub>reject</sub>. If transition(q, x) = (r, y, R) put domino [qx / by] into D
+                            and transition(q, x) =(r, y, L) put domino [zqx / rzy] into D.
+                        </li><br>
+                        <li>For every tape alphabet x put [x / x] into D.To mark separation of each configurations put [# / #] and [# / _#] into D .
+                        </li><br>
+                        <li>To read input alphabets x even after Turing Machine is accepting state put [xqa / qa] and [qax / qa]and [qa# / #] into D. These steps concludes construction of D.
+                        </li><br>
+                    </ol>
+                    <p>Since this instance of MPCP, we need to convert this to PCP. So to convert to D, we consider below domino and strings matching.</p><br>
+                    <p><strong>Converting MPCP To PCP :</strong><br /> Let u = u1, u2, &#8230;, un be any string of input length n and modify these strings as</p><br>
+                    <pre>$u = *u1*u2*u3* …*un<br>
+            u$ = u1* u2* u3* … un*<br>
+            $u$ = * u1* u2* u3* ... un* </pre><br>
+                    <p>Let D be set of two faced Dominos,</p><br>
+                    <pre>D = {[u1 / v1], [u2 / v2], [u3 / v3], ..., [un / vn]} and {[$u1 / $v1$], [$u2 / v2$], ..., [*_ / _]} </pre>
+                    <p>From above dominos collection, we could see only domino has partial match starts with [$u1 / $v1$] and to place marker end of inputs[*_ / _].<br /> There by we can avoid stating explicit requirement of domino should start with first
+                        domino.
+                        <br /> If number of configurations of Turing machine does not lie within value of qng<sup>n</sup>, then Turing machine is looping state. It does not halt.</p><br>
+        </div>
+    </div>
+</body>
+
+</html>

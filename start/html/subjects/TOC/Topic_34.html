@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_29.html">
+                    <li>Turing Machine</li>
+                </a>
+                <a href="Topic_30.html">
+                    <li>Variation of Turing Machine</li>
+                </a>
+                <a href="Topic_31.html">
+                    <li>NP Hard and NP-Complete Classes</li>
+                </a>
+                <a href="Topic_32.html">
+                    <li>Language Decidability</li>
+                </a>
+                <a href="Topic_33.html">
+                    <li>Undecidable Languages</li>
+                </a>
+                <a href="Topic_34.html" class="active">
+                    <li>Halting Problem</li>
+                </a>
+                <a href="Topic_35.html">
+                    <li>Post Correspondence Problem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1>Halting Problem</h1><br>
+            <p>To understand better the halting problem, we must know <a href="https://www.geeksforgeeks.org/theory-of-computation-decidability/" rel="noopener" target="_blank">Decidability</a>, <a href="https://www.geeksforgeeks.org/undecidability-and-reducibility/"
+                    rel="noopener" target="_blank">Undecidability</a> and <a href="https://www.geeksforgeeks.org/turing-machine/" rel="noopener" target="_blank">Turing machine</a>, <a href="https://www.geeksforgeeks.org/theory-computation-decidable-undecidable-problems/"
+                    rel="noopener" target="_blank">decision problems</a> and also a theory named as Computability theory and Computational complexity theory.</p><br>
+            <p>Some important terms:</p><br>
+            <ul>
+                <li><b>Computability theory &#8211;</b><br /> The branch of theory of computation that studies which problems are computationally solvable using different model. In computer science, the computational complexity, or simply complexity of an
+                    algorithm is the amount of resources required for running it.
+                </li><br>
+                <li><b>Decision problems &#8211;</b><br /> A decision problem has only two possible outputs (yes or no) on any input. In computability theory and computational complexity theory, a decision problem is a problem that can be posed as a yes-no
+                    question of the input values. Like is there any solution to a particular problem? The answer would be either a yes or no. A decision problem is any arbitrary yes/no question on an infinite set of inputs.
+                </li><br>
+                <li><b>Turing machine &#8211;</b><br /> A Turing machine is a mathematical model of computation. A Turing machine is a general example of a CPU that controls all data manipulation done by a computer. Turing machine can be halting as well as
+                    non halting and it depends on algorithm and input associated with the algorithm.
+                </li><br>
+            </ul><br>
+            <p>Now, lets discuss Halting problem:</p><br>
+            <p><b>The Halting problem &#8211;</b> Given a program/algorithm will ever halt or not?<br /> Halting means that the program on certain input will accept it and halt or reject it and halt and it would never go into an infinite loop. Basically
+                halting means terminating. So can we have an algorithm that will tell that the given program will halt or not. In terms of Turing machine, will it terminate when run on some machine with some particular given input string.</p><br>
+            <p>The answer is no we cannot design a generalized algorithm which can appropriately say that given a program will ever halt or not?<br /> The only way is to run the program and check whether it halts or not.<br /> We can refrain the halting
+                problem question in such a way also: Given a program written in some programming language(c/c++/java) will it ever get into an infinite loop(loop never stops) or will it always terminate(halt)?</p><br/>
+
+            <p>This is an undecidable problem because we cannot have an algorithm which will tell us whether a given program will halt or not in a generalized way i.e by having specific program/algorithm.In general we can&#8217;t always know that&#8217;s
+                why we can&#8217;t have a general algorithm.The best possible way is to run the program and see whether it halts or not.In this way for many programs we can see that it will sometimes loop and always halt.</p><br>
+            <p><b>Proof by Contradiction &#8211;</b><br />
+                <b>Problem statement:</b> Can we design a machine which if given a program can find out if that program will always halt or not halt on a particular input?</p><br>
+            <p><b>Solution:</b> Let us assume that we can design that kind of machine called as HM(P, I) where HM is the machine/program, P is the program and I is the input. On taking input the both arguments the machine HM will tell that the program P
+                either halts or not.<br /> If we can design such a program this allows us to write another program we call this program CM(X) where X is any program(taken as argument) and according to the definition of the program CM(X) shown in the figure.</p><br>
+            <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/halt1-1.png" width="611" height="251" class="aligncenter size-full" /></p><br>
+            <p>In the program CM(X) we call the function HM(X), which we have already defined and to HM() we pass the arguments (X, X), according to the definition of HM() it can take two arguments i.e one is program and another is the input.Now in the second
+                program we pass X as a program and X as input to the function HM().We know that the program HM() gives two output either &#8220;Halt&#8221; or &#8220;Not Halt&#8221;.But in case second program, when HM(X, X) will halt loop body tells to
+                go in loop and when it doesn&#8217;t halt that means loop, it is asked to return.</p><br>
+            <p>Now we take one more situation where the program CM is passed to CM() function as an argument. Then there would be some impossibility, i.e., a condition arises which is not possible.</p><br>
+            <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/halt2.png" width="611" height="494" class="aligncenter size-full" /></p><br>
+            <p>It is impossible for outer function to halt if its code (inner body) is in loop and also it is impossible for outer non halting function to halt even after its inner code is halting. So the both condition is non halting for CM machine/program
+                even we had assumed in the beginning that it would halt.So this is the contradiction and we can say that our assumption was wrong and this problem, i.e., halting problem is undecidable.</p><br>
+            <p>This is how we proved that halting problem is undecidable.</p><br>
+        </div>
+    </div>
+</body>
+
+</html>

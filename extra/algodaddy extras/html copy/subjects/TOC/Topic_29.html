@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_29.html" class="active">
+                    <li>Turing Machine</li>
+                </a>
+                <a href="Topic_30.html">
+                    <li>Variation of Turing Machine</li>
+                </a>
+                <a href="Topic_31.html">
+                    <li>NP Hard and NP-Complete Classes</li>
+                </a>
+                <a href="Topic_32.html">
+                    <li>Language Decidability</li>
+                </a>
+                <a href="Topic_33.html">
+                    <li>Undecidable Languages</li>
+                </a>
+                <a href="Topic_34.html">
+                    <li>Halting Problem</li>
+                </a>
+                <a href="Topic_35.html">
+                    <li>Post Correspondence Problem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Turing Machine</h1><br>
+            <p>Turing machine was invented in 1936 by <strong>Alan Turing</strong>. It is an accepting device which accepts Recursive Enumerable Language generated by type 0 grammar.</p><br>
+            <p>There are various features of the Turing machine:</p><br>
+            <ol class="points">
+                <li>It has an external memory which remembers arbitrary long sequence of input.</li><br>
+                <li>It has unlimited memory capability.</li><br>
+                <li>The model has a facility by which the input at left or right on the tape can be read easily.</li><br>
+                <li>The machine can produce a certain output based on its input. Sometimes it may be required that the same input has to be used to generate the output. So in this machine, the distinction between input and output has been removed. Thus a
+                    common set of alphabets can be used for the Turing machine.</li><br>
+            </ol>
+            <h2 class="h2">Formal definition of Turing machine</h2><br>
+            <p>A Turing machine can be defined as a collection of 7 components:</p><br>
+            <p><strong>Q</strong>: the finite set of states<br>
+                <strong>&sum;</strong>: the finite set of input symbols<br>
+                <strong>T</strong>: the tape symbol<br>
+                <strong>q0</strong>: the initial state<br>
+                <strong>F</strong>: a set of final states<br>
+                <strong>B</strong>: a blank symbol used as a end marker for input<br>
+                <strong>&delta;</strong>: a transition or mapping function.</p><br>
+            <p>The mapping function shows the mapping from states of finite automata and input symbol on the tape to the next states, external symbols and the direction for moving the tape head. This is known as a triple or a program for turing machine.</p><br>
+            <div class="codeblock">
+                <p>
+                    (q0, a) &rarr; (q1, A, R)
+                </p>
+            </div><br>
+            <p>That means in q0 state, if we read symbol 'a' then it will go to state q1, replaced a by X and move ahead right(R stands for right).</p><br>
+            <h3 class="h3">Example:</h3><br>
+            <p>Construct TM for the language L ={0<sup>n</sup>1<sup>n</sup>} where n>=1.</p><br>
+            <p><strong>Solution:</strong></p>
+            <p>We have already solved this problem by PDA. In PDA, we have a stack to remember the previous symbol. The main advantage of the Turing machine is we have a tape head which can be moved forward or backward, and the input tape can be scanned.</p><br>
+            <p>The simple logic which we will apply is read out each '0' mark it by A and then move ahead along with the input tape and find out 1 convert it to B. Now, repeat this process for all a's and b's.</p><br>
+            <p>Now we will see how this turing machine work for 0011.</p><br> The simulation for 0011 can be shown as below:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine.png" alt="Turing Machine" /><br>
+            <p>Now, we will see how this turing machine will works for 0011. Initially, state is q0 and head points to 0 as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine2.png" alt="Turing Machine" /><br>
+            <p>The move will be &delta;(q0, 0) = &delta;(q1, A, R) which means it will go to state q1, replaced 0 by A and head will move to the right as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine3.png" alt="Turing Machine" /><br>
+            <p>The move will be &delta;(q1, 0) = &delta;(q1, 0, R) which means it will not change any symbol, remain in the same state and move to the right as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine4.png" alt="Turing Machine" /><br>
+            <p>The move will be &delta;(q1, 1) = &delta;(q2, B, L) which means it will go to state q2, replaced 1 by B and head will move to left as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine5.png" alt="Turing Machine" /><br>
+            <p>Now move will be &delta;(q2, 0) = &delta;(q2, 0, L) which means it will not change any symbol, remain in the same state and move to left as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine6.png" alt="Turing Machine" /><br>
+            <p>The move will be &delta;(q2, A) = &delta;(q0, A, R), it means will go to state q0, replaced A by A and head will move to the right as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine7.png" alt="Turing Machine" /><br>
+            <p>The move will be &delta;(q0, 0) = &delta;(q1, A, R) which means it will go to state q1, replaced 0 by A, and head will move to right as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine8.png" alt="Turing Machine" /><br>
+            <p>The move will be &delta;(q1, B) = &delta;(q1, B, R) which means it will not change any symbol, remain in the same state and move to right as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine9.png" alt="Turing Machine" /><br>
+            <p>The move will be &delta;(q1, 1) = &delta;(q2, B, L) which means it will go to state q2, replaced 1 by B and head will move to left as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine10.png" alt="Turing Machine" /><br>
+            <p>The move &delta;(q2, B) = (q2, B, L) which means it will not change any symbol, remain in the same state and move to left as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine11.png" alt="Turing Machine" /><br>
+            <p>Now immediately before B is A that means all the 0?s are market by A. So we will move right to ensure that no 1 is present. The move will be &delta;(q2, A) = (q0, A, R) which means it will go to state q0, will not change any symbol, and move
+                to right as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine12.png" alt="Turing Machine" /><br>
+            <p>The move &delta;(q0, B) = (q3, B, R) which means it will go to state q3, will not change any symbol, and move to right as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine13.png" alt="Turing Machine" /><br>
+            <p>The move &delta;(q3, B) = (q3, B, R) which means it will not change any symbol, remain in the same state and move to right as:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine14.png" alt="Turing Machine" /><br>
+            <p>The move &delta;(q3, &Delta;) = (q4, &Delta;, R) which means it will go to state q4 which is the HALT state and HALT state is always an accept state for any TM.</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-turing-machine15.png" alt="Turing Machine" /><br>
+            <p>The same TM can be represented by Transition Diagram:</p><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

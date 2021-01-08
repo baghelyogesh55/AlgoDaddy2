@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revise Code</title>
+    <script>
+        let company = {
+            name: "Apple",
+            foundationYear: 1976,
+            productsList: [{
+                name: "iPhone",
+                year: 2007
+            }, {
+                name: "iPad",
+                year: 2010
+            }, ],
+            foundedBy: ["Steve Jobs", "Steve Wozniak"],
+            ceo: "Steve Jobs",
+            createNewProduct: function(obj) {
+                company.productsList.push(obj);
+            },
+            resign: function() {
+                var ceo = company.ceo;
+                company.ceo = null;
+                return ceo;
+            },
+            hireCeo: function(name) {
+                name = "Tim Cook";
+                company.ceo = name;
+            },
+            toString: function() {
+                var products = "";
+                for (p of company.productsList) {
+                    console.log(p);
+                    console.log(p.name)
+                    products += `${p.name}-${p.year},`;
+                }
+
+                return `name : ${company.name}<br>
+                foundationYear : ${company.foundationYear}<br>
+                foundedBy : ${company.foundedBy}<br>
+                ceo : ${company.ceo}<br>
+                productList : ${products}<br><br><br>
+                company : ${JSON.stringify(company)}`;
+            }
+        };
+        document.write(company + "<br><br>");
+        let current_ceo = company.resign();
+        document.write(current_ceo + " resigned<br><br>");
+        document.write(company);
+        company.hireCeo();
+        document.write("<br><br>After hiring new CEO<br><br>");
+        document.write(company);
+        var obj = new Object();
+        obj.name = prompt("Enter name of product");
+        obj.year = prompt("Enter product's year");
+        company.createNewProduct(obj);
+        document.write("<br><br>After taking new inputs<br><br>");
+        document.write(company);
+    </script>
+</head>
+
+<body>
+    <button>Hi</button>
+</body>
+
+</html>

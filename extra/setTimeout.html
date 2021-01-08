@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout Demo</title>
+    <script>
+        var x = 0;
+        var s = setTimeout(function() {
+            x++;
+            document.write(x + "<br>");
+            if (x == 1) {
+                document.write("Done!!");
+                clearTimeout(s);
+            }
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    Hello Yogesh
+</body>
+
+</html>

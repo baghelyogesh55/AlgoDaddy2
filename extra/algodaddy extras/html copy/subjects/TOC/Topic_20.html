@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_15.html">
+                    <li>Type of grammers</li>
+                </a>
+                <a href="Topic_16.html">
+                    <li>Derivation Tree</li>
+                </a>
+                <a href="Topic_17.html">
+                    <li> Ambiguity in grammar</li>
+                </a>
+                <a href="Topic_18.html">
+                    <li>Simplication of CFG</li>
+                </a>
+                <a href="Topic_19.html">
+                    <li>Chomsky's Normal Form (CNF)</li>
+                </a>
+                <a href="Topic_20.html" class="active">
+                    <li>Greibach Normal Form (GNF)</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Greibach Normal Form (GNF)</h1>
+            <br>
+            <p>GNF stands for Greibach normal form. A CFG(context free grammar) is in GNF(Greibach normal form) if all the production rules satisfy one of the following conditions:</p>
+            <br>
+            <ul class="points">
+                <li>A start symbol generating &epsilon;. For example, S &rarr; &epsilon;.</li>
+                </br>
+                <li>A non-terminal generating a terminal. For example, A &rarr; a.</li>
+                </br>
+                <li>A non-terminal generating a terminal which is followed by any number of non-terminals. For example, S &rarr; aASB.</li>
+                </br>
+            </ul>
+            </br>
+            <p><strong>For example:</strong></p>
+            </br>
+            <div class="codeblock">
+                <p>
+                    G1 = {S &rarr; aAB | aB, A &rarr; aA| a, B &rarr; bB | b}</br>
+                    G2 = {S &rarr; aAB | aB, A &rarr; aA | &epsilon;, B &rarr; bB | &epsilon;}</br>
+                </p>
+            </div>
+            <br>
+            <p>The production rules of Grammar G1 satisfy the rules specified for GNF, so the grammar G1 is in GNF. However, the production rule of Grammar G2 does not satisfy the rules specified for GNF as A &rarr; &epsilon; and B &rarr; &epsilon; contains
+                &epsilon;(only start symbol can generate &epsilon;). So the grammar G2 is not in GNF.</p>
+            </br>
+            </br>
+            <h2 class="h2">Steps for converting CFG into GNF</h2>
+            </br>
+            </br>
+            <p><strong>Step 1:</strong> Convert the grammar into CNF.</p>
+            </br>
+            </br>
+            <p>If the given grammar is not in CNF, convert it into CNF. You can refer the following topic to convert the CFG into CNF: Chomsky normal form</br>
+                </br>
+                <p><strong>Step 2:</strong> If the grammar exists left recursion, eliminate it.</p>
+                </br>
+                </br>
+                <p>If the context free grammar contains left recursion, eliminate it. You can refer the following topic to eliminate left recursion: Left Recursion</p>
+                </br>
+                </br>
+                <p><strong>Step 3:</strong> In the grammar, convert the given production rule into GNF form.</p>
+                </br>
+                </br>
+                <p>If any production rule in the grammar is not in GNF form, convert it.</p>
+                </br>
+                </br>
+                <h3 class="h3">Example:</h3>
+                </br>
+                </br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; XB | AA</br>
+                        A &rarr; a | SA</br>
+                        B &rarr; b</br>
+                        X &rarr; a</br>
+                    </p>
+                </div>
+                </br>
+                <p><strong>Solution:</strong></p>
+                <p>As the given grammar G is already in CNF and there is no left recursion, so we can skip step 1 and step 2 and directly go to step 3.</p>
+                </br>
+                <p>The production rule A &rarr; SA is not in GNF, so we substitute S &rarr; XB | AA in the production rule A &rarr; SA as:</p>
+                </br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; XB | AA</br>
+                        </br>
+                        A &rarr; a | XBA | AAA</br>
+                        B &rarr; b</br>
+                        X &rarr; a</br>
+                    </p>
+                </div>
+                </br>
+                <p>The production rule S &rarr; XB and B &rarr; XBA is not in GNF, so we substitute X &rarr; a in the production rule S &rarr; XB and B &rarr; XBA as:</p>
+                </br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; aB | AA</br>
+                        A &rarr; a | aBA | AAA</br>
+                        B &rarr; b</br>
+                        X &rarr; a</br>
+                    </p>
+                </div>
+                </br>
+                <p>Now we will remove left recursion (A &rarr; AAA), we get:</p>
+                </br>
+                </br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; aB | AA</br>
+                        A &rarr; aC | aBAC</br>
+                        C &rarr; AAC | &epsilon;</br>
+                        B &rarr; b</br>
+                        X &rarr; a</br>
+                    </p>
+                </div>
+                </br>
+                <p>Now we will remove null production C &rarr; &epsilon;, we get:</p>
+                </br>
+                </br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; aB | AA</br>
+                        A &rarr; aC | aBAC | a | aBA</br>
+                        C &rarr; AAC | AA</br>
+                        B &rarr; b</br>
+                        X &rarr; a</br>
+                    </p>
+                </div>
+                </br>
+                <p>The production rule S &rarr; AA is not in GNF, so we substitute A &rarr; aC | aBAC | a | aBA in production rule S &rarr; AA as:</p>
+                </br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; aB | aCA | aBACA | aA | aBAA</br>
+                        A &rarr; aC | aBAC | a | aBA</br>
+                        C &rarr; AAC</br>
+                        C &rarr; aCA | aBACA | aA | aBAA</br>
+                        B &rarr; b</br>
+                        X &rarr; a</br>
+                    </p>
+                </div>
+                </br>
+                <p>The production rule C &rarr; AAC is not in GNF, so we substitute A &rarr; aC | aBAC | a | aBA in production rule C &rarr; AAC as:</p>
+                </br>
+                <div class="codeblock">
+                    <p>
+                        S &rarr; aB | aCA | aBACA | aA | aBAA</br>
+                        A &rarr; aC | aBAC | a | aBA</br>
+                        C &rarr; aCAC | aBACAC | aAC | aBAAC</br>
+                        C &rarr; aCA | aBACA | aA | aBAA</br>
+                        B &rarr; b</br>
+                        X &rarr; a</br>
+                    </p>
+                </div>
+                </br>
+                <p>Hence, this is the GNF form for the grammar G.</p>
+                <br>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Moore Machine</title>
+    <link rel="icon" href="../../../images/logo.svg" type="image/gif">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/style copy.css" type="text/css" />
+    <link rel="stylesheet" href="../page.css" />
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+    <script src="../../../js/firebase.js"></script>
+    <script src="check.js"></script>
+
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+
+            // make it as accordion for smaller screens
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        }); // jquery end
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top">
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto " href="../../../index.html"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a>
+        <button class="navbar-toggler align-self-start" id="btnToggle" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end  p-3 p-lg-0 mt-5 mt-lg-0 mobileMenu" id="main_nav">
+
+            <ul class="navbar-nav mr-auto align-self-stretch">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i><span> Categories</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">College Course &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../../college/first_year.html">First Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/second_year.html">Second Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/third_year.html"> Third Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/fourth_year.html"> Fourth Year</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Extra &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">App Development</a></li>
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Languages &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">C</a></li>
+                                <li><a class="dropdown-item" href="#">C++</a></li>
+                                <li><a class="dropdown-item" href="#">Java</a></li>
+                                <li><a class="dropdown-item" href="#">Python</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-graduation-cap"></i><span> Placements</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../../placements/Interview Tips.html">Interview Tips</a></li>
+                        <li><a class="dropdown-item" href="../../placements/HR Interview Questions.html">HR Interview Questions</a></li>
+                        <li><a class="dropdown-item" href="../../placements/TCS.html">TCS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-book"></i><span> Exams</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../../exams/gate.html">Gate</a></li>
+                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="../../about/aboutUs.html">
+                        <i class="fa fa-user"></i><span> About Us</span></a>
+                </li>
+
+            </ul>
+
+
+            <ul class="navbar-nav navbar-right" id="loginul">
+                <li class="nav-item profileSignIn">
+                    <a class="nav-link text-white" href="../../login/login.html?#"><img src="../../../images/user2.png" height="40px" width="40px" />Sign In</a>
+                </li>
+                <li class="nav-item dropdown profileName" style="display: none;">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <img id="userPic" height="40px" width="40px" />
+                        <span id="userName"> Name</span></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="../../login/profile.html">My Profile</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="Logout();">Logout</a></li>
+                    </ul>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- navbar-collapse.// -->
+    </nav>
+
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_1.html">
+                    <li class="act">Introduction to Automata theory</li>
+                </a>
+                <a href="Topic_2.html">
+                    <li>Finite Automata</li>
+                </a>
+                <a href="Topic_3.html" class="active">
+                    <li>Moore Machine</li>
+                </a>
+                <a href="Topic_4.html">
+                    <li>Mealy Machine</li>
+                </a>
+                <a href="Topic_5.html">
+                    <li>Conversion of moore to mealy machine</li>
+                </a>
+                <a href="Topic_6.html">
+                    <li>Conversion of mealy to moore machine</li>
+                </a>
+                <a href="#" onclick="checkModule1();">
+                    <li>Practice / Quiz</li>
+                </a>
+                <br><br><br>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div>
+            <p class="p3">
+                <h1>Moore Machine</h1><br>
+                <p>Moore machine is a finite state machine in which the next state is decided by the current state and current input symbol. The output symbol at a given time depends only on the present state of the machine. Moore machine can be described
+                    by 6 tuples (Q, q0, &sum;, O, &delta;, &lambda;) where,</p>
+                <div class="codeblock">
+                    <ul>
+                        <li>Q: finite set of states</li>
+                        <li>q0: initial state of machine</li>
+                        <li>&sum;: finite set of input symbols</li>
+                        <li> O: output alphabet</li>
+                        <li>&delta;: transition function where Q &times; &sum; &rarr; Q</li>
+                        <li>&lambda;: output function where Q &rarr; O</li>
+                    </ul>
+                </div>
+                <h3 class="h3">Example 1:</h3>
+                <p>The state diagram for Moore Machine is</p>
+                <img src="../../../images/mooreex1.png" alt="Moore Machine" /><br>
+                <p>Transition table for Moore Machine is:</p>
+                <img src="../../../images/mooreex2.png" alt="Moore Machine" /><br>
+                <p>In the above Moore machine, the output is represented with each input state separated by /. The output length for a Moore machine is greater than input by 1.</p>
+                <p><strong>Input:</strong> 010</p>
+                <p><strong>Transition:</strong> &delta; (q0,0) => &delta;(q1,1) => &delta;(q1,0) => q2</p>
+                <p><strong>Output:</strong> 1110(1 for q0, 1 for q1, again 1 for q1, 0 for q2)</p>
+                <h3 class="h3">Example 2:</h3>
+                <p>Design a Moore machine to generate 1's complement of a given binary number.</p>
+                <p><strong>Solution:</strong> To generate 1's complement of a given binary number the simple logic is that if the input is 0 then the output will be 1 and if the input is 1 then the output will be 0. That means there are three states. One
+                    state is start state. The second state is for taking 0's as input and produces output as 1. The third state is for taking 1's as input and producing output as 0.</p>
+                <p>Hence the Moore machine will be,</p>
+                <img src="../../../images/mooreex3.png" alt="Moore Machine" /><br>
+                <p>For instance, take one binary number 1011 then</p>
+                <table class="alt">
+                    <tr>
+                        <td><strong>Input</strong></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>State</strong></td>
+                        <td>q0</td>
+                        <td>q2</td>
+                        <td>q1</td>
+                        <td>q2</td>
+                        <td>q2</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Output</strong></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                <p>Thus we get 00100 as 1's complement of 1011, we can neglect the initial 0 and the output which we get is 0100 which is 1's complement of 1011. The transaction table is as follows:</p>
+                <img src="../../../images/mooreex4.png" alt="Moore Machine" /><br>
+                <p>Thus Moore machine M = (Q, q0, &sum;, O, &delta;, &lambda;); where Q = {q0, q1, q2}, &sum; = {0, 1}, O = {0, 1}. the transition table shows the &delta; and &lambda; functions.</p>
+                <h3 class="h3">Example 3:</h3>
+                <p>Design a Moore machine for a binary input sequence such that if it has a substring 101, the machine output A, if the input has substring 110, it outputs B otherwise it outputs C.</p>
+                <p><strong>Solution:</strong> For designing such a machine, we will check two conditions, and those are 101 and 110. If we get 101, the output will be A, and if we recognize 110, the output will be B. For other strings, the output will be
+                    C.
+                </p>
+                <p>The partial diagram will be:</p>
+                <img src="../../../images/mooreex5.png" alt="Moore Machine" /><br>
+                <p>Now we will insert the possibilities of 0's and 1's for each state. Thus the Moore machine becomes:</p>
+                <img src="../../../images/mooreex6.png" alt="Moore Machine" />
+                <h3 class="h3">Example 4:</h3>
+                <p>Construct a Moore machine that determines whether an input string contains an even or odd number of 1's. The machine should give 1 as output if an even number of 1's are in the string and 0 otherwise.</p>
+                <p><strong>Solution:</strong></p>
+                <p>The Moore machine will be:</p>
+                <img src="../../../images/mooreex7.png" alt="Moore Machine" />
+                <p>This is the required Moore machine. In this machine, state q1 accepts an odd number of 1's and state q0 accepts even number of 1's. There is no restriction on a number of zeros. Hence for 0 input, self-loop can be applied on both the states.</p>
+                <h3 class="h3">Example 5:</h3>
+                <p>Design a Moore machine with the input alphabet {0, 1} and output alphabet {Y, N} which produces Y as output if input sequence contains 1010 as a substring otherwise, it produces N as output.</p>
+                <p><strong>Solution:</strong></p>
+                <p>The Moore machine will be:</p>
+                <img src="../../../images/mooreex8.png" alt="Moore Machine" />
+            </p>
+        </div>
+    </div>
+    <!-- container //  -->
+    <script>
+        $(document).ready(function() {
+            $(".navbar-toggler").on("click", function() {
+                $(".mobileMenu").toggleClass("open");
+            })
+        });
+    </script>
+</body>
+
+</html>

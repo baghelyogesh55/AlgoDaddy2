@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="../firebase.js"></script>
+    <script src="welcome.js"></script>
+    <script src="../myscript.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            padding: 10px;
+            margin: 30px;
+        }
+        
+        #signout {
+            position: absolute;
+            right: 20px;
+            top: 50px;
+        }
+        
+        button {
+            margin: 10px;
+        }
+        
+        #profile {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h5>Welcome to AlgoDaddy</h5>
+    <p id="mssg" style="font-weight: 700;"></p>
+
+    <label for="subject">Subject:</label>
+    <select name="subject" id="subject">
+    <option value="toc">Theory Of Computation</option>
+    <option value="dbms">Database Management System</option>
+    <option value="cs">Cyber Security</option>
+    <option value="iwt">Internet And Web Technology</option>
+</select>
+
+    <br><br> <label for="topic">Topic:  </label>
+    <select name="topic" id="topic">
+    <option value="t1">Topic 1</option>
+    <option value="t2">Topic 2</option>
+    <option value="t3">Topic 3</option>
+    <option value="t4">Topic 4</option>
+    <option value="t5">Topic 5</option>
+    </select>
+
+    <button class="btn btn-danger" id="signout" onclick="signOut()">SignOut</button> <br><br>Enter Marks : <input type="text" id="marks"><br>
+    <button class="btn btn-danger" onclick="addMarks()">Add Marks</button><br>
+    <a class="btn btn-danger" href="myprofile.html" id="profile">My Profile</a><br>
+    <p>Now, You can see your score in your profile..<br>Try to explore new features available.</p>
+    <span style='font-size:100px;'>&#128512;</span>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Third Year</title>
+    <link rel="shortcut icon" type="image/jpeg" href="../../images/favicon2.jpeg">
+    <link rel="stylesheet" href="../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript">
+        function myFunction(sub) {
+            if (sub == "toc")
+                window.open("../Subjects/TOC/TOC.html", "_self");
+            else if (sub == "dbms")
+                window.open("../Subjects/DBMS/DBMS.html", "_self");
+            //location.href check for it
+        }
+    </script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="../../home.html"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="first_year.html">First Year</a></li>
+                                        <li><a href="second_year.html">Second Year</a></li>
+                                        <li><a href="#">Third Year</a></li>
+                                        <li><a href="fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+
+
+        <span><a href="#"><img src="../../images/user.png"></a></span>
+
+    </div>
+
+
+    <div class="second_head">
+        <h2 id="year">Third Year</h2>
+        <h2 id="sem"><a href="#6th" class="showbtn">Sixth Sem</a></h2>
+    </div>
+
+    <div class="con">
+        <h2>5<sup>th</sup> Sem</h2>
+        <div class="card" onclick="myFunction('toc')">
+            <!-- <img src="Anonnymous.jpg " alt="Avatar " style="width:100% "> -->
+            <h1>Theory of Computation</h1>
+            <div class="container ">
+                <h3><b>Subject Code - CS 501</b></h3>
+                <p><br> In this module, you will be learning about solving computational problem using algorithms</p>
+            </div>
+        </div>
+
+        <div class="card " onclick="myFunction('dbms')">
+            <!-- <img src="Anonnymous.jpg " alt="Avatar " style="width:100% "> -->
+            <h1>Database Management System</h1>
+            <div class="container ">
+                <h3><b>Subject Code - CS 502</b></h3>
+                <p><br> A database management system (DBMS) is a software package designed to define, manipulate, retrieve and manage data in a database. </p>
+            </div>
+        </div>
+
+        <div class="card ">
+            <!-- <img src="Anonnymous.jpg " alt="Avatar " style="width:100% "> -->
+            <h1>Cyber Security</h1>
+            <div class="container ">
+                <h3><b>Subject Code - CS 503(C) (Elective)</b></h3>
+                <p><br> Cyber security or information technology security are the techniques of protecting computers, networks, programs and data from unauthorized access or attacks that are aimed for exploitation.</p>
+            </div>
+        </div>
+
+        <div class="card ">
+            <!-- <img src="Anonnymous.jpg " alt="Avatar " style="width:100% "> -->
+            <h1>Internet and Web Technology</h1>
+            <div class="container ">
+                <h3><b>Subject Code - CS 504(A) (Elective)</b></h3>
+                <p><br> In this module you will come across Front End and Back End Technologies</p>
+            </div>
+        </div>
+
+
+        <h2 id="6th">6<sup>th</sup> Sem</h2>
+        <div class="card" onclick="myFunction()">
+            <!-- <img src="Anonnymous.jpg " alt="Avatar " style="width:100% "> -->
+            <h1>Machine Learning</h1>
+            <div class="container ">
+                <h3><b>Subject Code - CS 601</b></h3>
+                <p><br> In this module, you will be learning about solving computational problem using algorithms</p>
+            </div>
+        </div>
+
+        <div class="card " id="toc ">
+            <!-- <img src="Anonnymous.jpg " alt="Avatar " style="width:100% "> -->
+            <h1>Computer Networks</h1>
+            <div class="container ">
+                <h3><b>Subject Code - CS 602</b></h3>
+                <p><br> A database management system (DBMS) is a software package designed to define, manipulate, retrieve and manage data in a database. </p>
+            </div>
+        </div>
+
+        <div class="card ">
+            <!-- <img src="Anonnymous.jpg " alt="Avatar " style="width:100% "> -->
+            <h1>Computer Graphics & Visualization</h1>
+            <div class="container ">
+                <h3><b>Subject Code - CS 603(B) (Elective)</b></h3>
+                <p><br> Cyber security or information technology security are the techniques of protecting computers, networks, programs and data from unauthorized access or attacks that are aimed for exploitation.</p>
+            </div>
+        </div>
+
+        <div class="card ">
+            <!-- <img src="Anonnymous.jpg " alt="Avatar " style="width:100% "> -->
+            <h1>Project Management</h1>
+            <div class="container ">
+                <h3><b>Subject Code - CS 604(B) (Elective)</b></h3>
+                <p><br> In this module you will come across Front End and Back End Technologies</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

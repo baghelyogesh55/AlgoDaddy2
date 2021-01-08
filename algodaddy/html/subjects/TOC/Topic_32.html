@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Language Decidability</title>
+    <link rel="icon" href="../../../images/logo.svg" type="image/gif">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/style copy.css" type="text/css" />
+    <link rel="stylesheet" href="../page.css" type="text/css" />
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+    <script src="../../../js/firebase.js"></script>
+    <script src="check.js"></script>
+
+
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+
+            // make it as accordion for smaller screens
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        }); // jquery end
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top">
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto " href="../../../index.html"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a>
+        <button class="navbar-toggler align-self-start" id="btnToggle" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end  p-3 p-lg-0 mt-5 mt-lg-0 mobileMenu" id="main_nav">
+
+            <ul class="navbar-nav mr-auto align-self-stretch">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i><span> Categories</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">College Course &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../../college/first_year.html">First Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/second_year.html">Second Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/third_year.html"> Third Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/fourth_year.html"> Fourth Year</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Extra &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">App Development</a></li>
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Languages &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">C</a></li>
+                                <li><a class="dropdown-item" href="#">C++</a></li>
+                                <li><a class="dropdown-item" href="#">Java</a></li>
+                                <li><a class="dropdown-item" href="#">Python</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-graduation-cap"></i><span> Placements</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../../placements/Interview Tips.html">Interview Tips</a></li>
+                        <li><a class="dropdown-item" href="../../placements/HR Interview Questions.html">HR Interview Questions</a></li>
+                        <li><a class="dropdown-item" href="../../placements/TCS.html">TCS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-book"></i><span> Exams</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../../exams/gate.html">Gate</a></li>
+                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="../../about/aboutUs.html">
+                        <i class="fa fa-user"></i><span> About Us</span></a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav navbar-right" id="loginul">
+                <li class="nav-item profileSignIn">
+                    <a class="nav-link text-white" href="../../login/login.html?#"><img src="../../../images/user2.png" height="40px" width="40px" />Sign In</a>
+                </li>
+                <li class="nav-item dropdown profileName" style="display: none;">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <img id="userPic" height="40px" width="40px" />
+                        <span id="userName"> Name</span></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="../../login/profile.html">My Profile</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="Logout();">Logout</a></li>
+                    </ul>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- navbar-collapse.// -->
+    </nav>
+
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_29.html">
+                    <li>Turing Machine</li>
+                </a>
+                <a href="Topic_30.html">
+                    <li>Variation of Turing Machine</li>
+                </a>
+                <a href="Topic_31.html">
+                    <li>NP Hard and NP-Complete Classes</li>
+                </a>
+                <a href="Topic_32.html" class="active">
+                    <li>Language Decidability</li>
+                </a>
+                <a href="Topic_33.html">
+                    <li>Undecidable Languages</li>
+                </a>
+                <a href="Topic_34.html">
+                    <li>Halting Problem</li>
+                </a>
+                <a href="Topic_35.html">
+                    <li>Post Correspondence Problem</li>
+                </a>
+                <a href="#" onclick="checkModule5();">
+                    <li>Practice / Quiz</li>
+                </a>
+                <br><br><br>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1>Language Decidability</h1><br>
+            <p>A language is called <b>Decidable</b> or <b>Recursive</b> if there is a Turing machine which accepts and halts on every input string <b>w</b>. Every decidable language is Turing-Acceptable.</p><br>
+            <img src="../../../images/decidability_and_decidable_languages.jpg" alt="Decidability and Decidable Languages" /><br>
+            <p>A decision problem <b>P</b> is decidable if the language <b>L</b> of all yes instances to <b>P</b> is decidable.</p><br>
+            <p>For a decidable language, for each input string, the TM halts either at the accept or the reject state as depicted in the following diagram &minus;</p><br>
+            <img src="../../../images/decidable_language.jpg" alt="Decidable Language" /><br><br>
+            <h2>Example 1</h2><br>
+            <p>Find out whether the following problem is decidable or not &minus;</p><br>
+            <p style="padding-left:10%;">Is a number ‘m’ prime?</p><br>
+            <h3>Solution</h3>
+            <p style="padding-left:10%;">Prime numbers = {2, 3, 5, 7, 11, 13, …………..}</p><br>
+            <p style="padding-left:10%;">Divide the number <b>‘m’</b> by all the numbers between ‘2’ and ‘&radic;m’ starting from ‘2’.</p><br>
+            <p style="padding-left:10%;">If any of these numbers produce a remainder zero, then it goes to the “Rejected state”, otherwise it goes to the “Accepted state”. So, here the answer could be made by ‘Yes’ or ‘No’.</p><br>
+            <p><b>Hence, it is a decidable problem.</b></p><br>
+            <h2>Example 2</h2><br>
+            <p>Given a regular language <b>L</b> and string <b>w</b>, how can we check if <b>w &isin; L</b>?</p><br>
+            <h3>Solution</h3><br>
+            <p>Take the DFA that accepts <b>L</b> and check if <b>w</b> is accepted</p><br>
+            <img src="../../../images/dfa1.jpg" alt="DFA 1" /><br><br>
+            <p>Some more decidable problems are &minus;</p><br>
+            <ul class="list">
+                <li>Does DFA accept the empty language?</li><br>
+                <li>Is L<sub>1</sub> &cap; L<sub>2</sub> = &empty; for regular sets?</li><br>
+            </ul>
+            <p><b>Note</b> &minus;</p><br>
+            <ul class="list">
+                <li>
+                    <p>If a language <b>L</b> is decidable, then its complement <b>L'</b> is also decidable</p>
+                </li><br>
+                <li>
+                    <p>If a language is decidable, then there is an enumerator for it.</p>
+                </li><br>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".navbar-toggler").on("click", function() {
+                $(".mobileMenu").toggleClass("open");
+            })
+        });
+    </script>
+</body>
+
+</html>

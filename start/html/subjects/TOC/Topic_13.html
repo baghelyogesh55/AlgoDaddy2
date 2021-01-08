@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_8.html">
+                    <li> Non Deterministic Finite Automata (NFA)</li>
+                </a>
+                <a href="Topic_9.html">
+                    <li>Deterministic finite automata machines(DFA)</li>
+                </a>
+                <a href="Topic_10.html">
+                    <li>conversion of NFA to DFA</li>
+                </a>
+                <a href="Topic_11.html">
+                    <li>minimization of automata machines</li>
+                </a>
+                <a href="Topic_12.html">
+                    <li>regular expression</li>
+                </a>
+                <a href="Topic_13.html" class="active">
+                    <li>Arden’s theorem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="entry-title" style="font-size: xx-large;font-style: oblique;">Arden&#8217;s Theorem </h1><br>
+            <p><b>Arden&#8217;s theorem</b> state that:<br /> &#8220;If P and Q are two regular expressions over <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7c3c63a735b16ba2b54347bed91422de_l3.png" class="ql-img-inline-formula quicklatex-auto-format"
+                    alt="&#32;&#36;&#92;&#115;&#117;&#109;&#95;" title="Rendered by QuickLaTeX.com" height="27" width="26" style="vertical-align: -7px;" />,<br> and if P does not contain <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png">                class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;" />, <br>then the following
+                equation in R given by R = Q + RP has an unique solution i.e., R = QP*.&#8221;<br /> That means, whenever we get any equation in the form of R = Q + RP, then we can directly replaced by R = QP*. So, here first we will prove that R = QP*
+                is the solution of this equation and then we will also prove that it is the unique solution of this equation.</p>
+            <p>Let&#8217;s start by taking this equation as equation (i)</p><br>
+            <pre>R = Q + RP  ......(i)</pre><br>
+            <p>Now, replacing R by R = QP*, we get,</p><br>
+            <pre>R = Q + QP*P </pre><br>
+            <p>Taking Q as common,</p><br>
+            <pre>R = Q(<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;"/> + P*P)
+                R = QP*  </pre><br>
+            <p>(As we know that <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;"
+                    title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;" /> + R*R = R*). Hence proved.</p><br/>
+            <div id="AP_G4GR_5" style="min-height:280px"></div><br/>
+            <p><i>Thus, R = QP* is the solution of the equation R = Q + RP.</i></p><br>
+            <p>Now, we have to prove that this is the only solution of this equation. Let me take this equation again:</p><br>
+            <pre>R = Q + RP</pre><br>
+            <p>Now, replace R by R = Q + RP,</p><br>
+            <pre>R = Q + (Q + RP)P<br>
+                  = Q + QP + R<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-85ffdc911f30e4ca57b6b8b3e3353606_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#50;" title="Rendered by QuickLaTeX.com" height="24" width="30" style="vertical-align: 0px;"/> </pre><br>
+            <p>Again, replace R by R = Q + RP:-</p><br>
+            <pre>R = Q + QP + (Q + RP) <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-85ffdc911f30e4ca57b6b8b3e3353606_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#50;" title="Rendered by QuickLaTeX.com" height="24" width="30" style="vertical-align: 0px;"/>
+                  = Q + QP + Q<br><img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-85ffdc911f30e4ca57b6b8b3e3353606_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#50;" title="Rendered by QuickLaTeX.com" height="24" width="30" style="vertical-align: 0px;"/> + R<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-d10d77aea79273bf595beb9a4b4c573b_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#51;" title="Rendered by QuickLaTeX.com" height="24" width="30" style="vertical-align: 0px;"/><br>
+                  = ...<br>
+                  = ...<br>
+                  =  Q + QP + Q<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-85ffdc911f30e4ca57b6b8b3e3353606_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#50;" title="Rendered by QuickLaTeX.com" height="24" width="30" style="vertical-align: 0px;"/> + .. + Q<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7b2eebccecfeeaa48f8da7c7e63c2e4d_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#110;" title="Rendered by QuickLaTeX.com" height="19" width="32" style="vertical-align: 0px;"/> + R<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-482ff19c4c30c486a2c04d50edc5c452_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#123;&#40;&#110;&#43;&#49;&#41;&#125;" title="Rendered by QuickLaTeX.com" height="25" width="72" style="vertical-align: 0px;"/> </pre><br>
+            <p>Now, replace R by R = QP*, we get,</p><br>
+            <pre>R = Q + QP + Q<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-85ffdc911f30e4ca57b6b8b3e3353606_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#50;" title="Rendered by QuickLaTeX.com" height="24" width="30" style="vertical-align: 0px;"/> + .. + Q<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7b2eebccecfeeaa48f8da7c7e63c2e4d_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#110;" title="Rendered by QuickLaTeX.com" height="19" width="32" style="vertical-align: 0px;"/> + QP*<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-482ff19c4c30c486a2c04d50edc5c452_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#123;&#40;&#110;&#43;&#49;&#41;&#125;" title="Rendered by QuickLaTeX.com" height="25" width="72" style="vertical-align: 0px;"/> </pre><br>
+            <p>Taking Q as common,</p><br>
+            <pre>R = Q(<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;"/> + P + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-85ffdc911f30e4ca57b6b8b3e3353606_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#50;" title="Rendered by QuickLaTeX.com" height="24" width="30" style="vertical-align: 0px;"/> + .. + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7b2eebccecfeeaa48f8da7c7e63c2e4d_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#110;" title="Rendered by QuickLaTeX.com" height="19" width="32" style="vertical-align: 0px;"/> + P*<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-482ff19c4c30c486a2c04d50edc5c452_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#123;&#40;&#110;&#43;&#49;&#41;&#125;" title="Rendered by QuickLaTeX.com" height="25" width="72" style="vertical-align: 0px;"/>)<br>
+                  = QP*    [As <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;"/> + P + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-85ffdc911f30e4ca57b6b8b3e3353606_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#50;" title="Rendered by QuickLaTeX.com" height="24" width="30" style="vertical-align: 0px;"/> + .. + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7b2eebccecfeeaa48f8da7c7e63c2e4d_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#110;" title="Rendered by QuickLaTeX.com" height="19" width="32" style="vertical-align: 0px;"/> + P*<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-482ff19c4c30c486a2c04d50edc5c452_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#80;&#94;&#123;&#40;&#110;&#43;&#49;&#41;&#125;" title="Rendered by QuickLaTeX.com" height="25" width="72" style="vertical-align: 0px;"/> <br>represent 
+                          the closure of P] </pre>
+            <p>Hence proved.</p><br>
+            <p><b>Thus, R = QP* is the unique solution of the equation R = Q + RP. </b></p><br>
+            <p>To understand this theorem, we will solve an example:</p><br>
+            <p><b>Example &#8211;</b></p><br>
+            <pre>q1 = q1.0  + <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;"/><br>
+                q2 = q1.1 + q2.0<br>
+                q3 = q2.1 + q3.0 + q3.1 </pre><br>
+            <p>Now,</p><br>
+            <pre>q1 = <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;"/> + q1.0<br>
+                q1 = <img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;"/>.0*    [By Arden's theorem]<br>
+                q1 = 0*      [<img src="https://www.geeksforgeeks.org/wp-content/ql-cache/quicklatex.com-7de0a4e8e797a2dd2d73a4b9cce4714a_l3.png" class="ql-img-inline-formula quicklatex-auto-format" alt="&#32;&#36;&#92;&#101;&#112;&#115;&#105;&#108;&#111;&#110;&#95;" title="Rendered by QuickLaTeX.com" height="13" width="9" style="vertical-align: -1px;"/>R = R]<br>
+                
+                .'. q2 = 0*1 +q2.0<br>
+                    q2 = 0*10*    </pre><br>
+            <p>[Applying Arden&#8217;s theorem]. Hence, the value of q2 is 0*10*.</p><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

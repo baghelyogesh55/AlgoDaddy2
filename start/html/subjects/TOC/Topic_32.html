@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_29.html">
+                    <li>Turing Machine</li>
+                </a>
+                <a href="Topic_30.html">
+                    <li>Variation of Turing Machine</li>
+                </a>
+                <a href="Topic_31.html">
+                    <li>NP Hard and NP-Complete Classes</li>
+                </a>
+                <a href="Topic_32.html" class="active">
+                    <li>Language Decidability</li>
+                </a>
+                <a href="Topic_33.html">
+                    <li>Undecidable Languages</li>
+                </a>
+                <a href="Topic_34.html">
+                    <li>Halting Problem</li>
+                </a>
+                <a href="Topic_35.html">
+                    <li>Post Correspondence Problem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1>Language Decidability</h1><br>
+            <p>A language is called <b>Decidable</b> or <b>Recursive</b> if there is a Turing machine which accepts and halts on every input string <b>w</b>. Every decidable language is Turing-Acceptable.</p><br>
+            <img src="/automata_theory/images/decidability_and_decidable_languages.jpg" alt="Decidability and Decidable Languages" /><br>
+            <p>A decision problem <b>P</b> is decidable if the language <b>L</b> of all yes instances to <b>P</b> is decidable.</p><br>
+            <p>For a decidable language, for each input string, the TM halts either at the accept or the reject state as depicted in the following diagram &minus;</p><br>
+            <img src="/automata_theory/images/decidable_language.jpg" alt="Decidable Language" /><br>
+            <h2>Example 1</h2><br>
+            <p>Find out whether the following problem is decidable or not &minus;</p><br>
+            <p style="padding-left:10%;">Is a number ‘m’ prime?</p><br>
+            <h3>Solution</h3>
+            <p style="padding-left:10%;">Prime numbers = {2, 3, 5, 7, 11, 13, …………..}</p><br>
+            <p style="padding-left:10%;">Divide the number <b>‘m’</b> by all the numbers between ‘2’ and ‘&radic;m’ starting from ‘2’.</p><br>
+            <p style="padding-left:10%;">If any of these numbers produce a remainder zero, then it goes to the “Rejected state”, otherwise it goes to the “Accepted state”. So, here the answer could be made by ‘Yes’ or ‘No’.</p><br>
+            <p><b>Hence, it is a decidable problem.</b></p><br>
+            <h2>Example 2</h2><br>
+            <p>Given a regular language <b>L</b> and string <b>w</b>, how can we check if <b>w &isin; L</b>?</p><br>
+            <h3>Solution</h3><br>
+            <p>Take the DFA that accepts <b>L</b> and check if <b>w</b> is accepted</p><br>
+            <img src="/automata_theory/images/dfa1.jpg" alt="DFA 1" /><br>
+            <p>Some more decidable problems are &minus;</p><br>
+            <ul class="list">
+                <li>Does DFA accept the empty language?</li><br>
+                <li>Is L<sub>1</sub> &cap; L<sub>2</sub> = &empty; for regular sets?</li><br>
+            </ul>
+            <p><b>Note</b> &minus;</p><br>
+            <ul class="list">
+                <li>
+                    <p>If a language <b>L</b> is decidable, then its complement <b>L'</b> is also decidable</p>
+                </li><br>
+                <li>
+                    <p>If a language is decidable, then there is an enumerator for it.</p>
+                </li><br>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

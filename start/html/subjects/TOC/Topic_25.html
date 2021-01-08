@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_23.html">
+                    <li">Pushdown Automata(PDA)</li>
+                </a>
+                <a href="Topic_24.html">
+                    <li>Non-deterministic Pushdown Automata</li>
+                </a>
+                <a href="Topic_25.html" class="active">
+                    <li>CFG to PDA Conversion</li>
+                </a>
+                <a href="Topic_26.html">
+                    <li>CFG equivalent to PDA</li>
+                </a>
+
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">CFG to PDA Conversion</h1><br>
+            <p>The first symbol on R.H.S. production must be a terminal symbol. The following steps are used to obtain PDA from CFG is:</p><br>
+            <p><strong>Step 1:</strong> Convert the given productions of CFG into GNF.</p><br>
+            <p><strong>Step 2:</strong> The PDA will only have one state {q}.</p><br>
+            <p><strong>Step 3:</strong> The initial symbol of CFG will be the initial symbol in the PDA.</p><br>
+            <p><strong>Step 4:</strong> For non-terminal symbol, add the following rule:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q, &epsilon;, A) = (q, &alpha;)
+                </p>
+            </div><br>
+            <p>Where the production rule is A &rarr; &alpha;</p><br>
+            <p><strong>Step 5:</strong> For each terminal symbols, add the following rule:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q, a, a) = (q, &epsilon;) for every terminal symbol
+                </p>
+            </div><br>
+            <h3 class="h3">Example 1:</h3><br>
+            <p>Convert the following grammar to a PDA that accepts the same language.</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; 0S1 | A<br> A &rarr; 1A0 | S | &epsilon;<br>
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>The CFG can be first simplified by eliminating unit productions:</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; 0S1 | 1S0 | &epsilon;
+                </p>
+            </div><br>
+            <p>Now we will convert this CFG to GNF:</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; 0SX | 1SY | &epsilon;<br> X &rarr; 1<br> Y &rarr; 0<br>
+                </p>
+            </div><br>
+            <p>The PDA can be:</p><br>
+            <div class="codeblock"><pre>
+            <strong>R1:</strong> &delta;(q, &epsilon;, S) = {(q, 0SX) | (q, 1SY) | (q, &epsilon;)}<br>
+            <strong>R2:</strong> &delta;(q, &epsilon;, X) = {(q, 1)}<br>
+            <strong>R3:</strong> &delta;(q, &epsilon;, Y) = {(q, 0)}<br>
+            <strong>R4:</strong> &delta;(q, 0, 0) = {(q, &epsilon;)}<br>
+            <strong>R5:</strong> &delta;(q, 1, 1) = {(q, &epsilon;)}<br>
+            </pre></div>
+            <h3 class="h3">Example 2:</h3><br>
+            <p>Construct PDA for the given CFG, and test whether 0104 is acceptable by this PDA.</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; 0BB<br> B &rarr; 0S | 1S | 0<br>
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>The PDA can be given as:</p><br>
+            <div class="codeblock">
+                <p>
+                    A = {(q), (0, 1), (S, B, 0, 1), &delta;, q, S, ?}
+                </p>
+            </div><br>
+            <p>The production rule &delta; can be:</p><br>
+            <div class="codeblock"><pre>
+            <strong>R1:</strong> &delta;(q, &epsilon;, S) = {(q, 0BB)}<br>
+            <strong>R2:</strong> &delta;(q, &epsilon;, B) = {(q, 0S) | (q, 1S) | (q, 0)}<br>
+            <strong>R3:</strong> &delta;(q, 0, 0) = {(q, &epsilon;)}<br>
+            <strong>R4:</strong> &delta;(q, 1, 1) = {(q, &epsilon;)}<br>
+            </pre></div><br>
+            <p>Testing 010<sup>4</sup> i.e. 010000 against PDA:</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q, 010000, S) &#8866; &delta;(q, 010000, 0BB)<br> &#8866; &delta;(q, 10000, BB) R1<br> &#8866; &delta;(q, 10000,1SB) R3 <br> &#8866; &delta;(q, 0000, SB) R2 <br> &#8866; &delta;(q, 0000, 0BBB) R1 <br> &#8866; &delta;(q, 000,
+                    BBB) R3 <br> &#8866; &delta;(q, 000, 0BB) R2 <br> &#8866; &delta;(q, 00, BB) R3 <br> &#8866; &delta;(q, 00, 0B) R2 <br> &#8866; &delta;(q, 0, B) R3 <br> &#8866; &delta;(q, 0, 0) R2<br> &#8866; &delta;(q, &epsilon;) R3 <br> ACCEPT
+                </p>
+            </div><br>
+            <p>Thus 010<sup>4</sup> is accepted by the PDA.</p><br>
+            <h3 class="h3">Example 3:</h3><br>
+            <p>Draw a PDA for the CFG given below:</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; aSb<br> S &rarr; a | b | &epsilon;<br>
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>The PDA can be given as:</p><br>
+            <div class="codeblock">
+                <p>
+                    P = {(q), (a, b), (S, a, b, z0), &delta;, q, z0, q}
+                </p>
+            </div><br>
+            <p>The mapping function &delta; will be:</p><br>
+            <div class="codeblock"><pre>
+            <strong>R1:</strong> &delta;(q, &epsilon;, S) = {(q, aSb)}<br>
+            <strong>R2:</strong> &delta;(q, &epsilon;, S) = {(q, a) | (q, b) | (q, &epsilon;)}<br>
+            <strong>R3:</strong> &delta;(q, a, a) = {(q, &epsilon;)}<br>
+            <strong>R4:</strong> &delta;(q, b, b) = {(q, &epsilon;)}<br>
+            <strong>R5:</strong> &delta;(q, &epsilon;, z0) = {(q, &epsilon;)}<br>
+            </pre></div><br>
+            <p><strong>Simulation:</strong> Consider the string aaabb</p><br>
+            <div class="codeblock">
+                <p>
+                    &delta;(q, &epsilon;aaabb, S) &#8866; &delta;(q, aaabb, aSb) R3<br> &#8866; &delta;(q, &epsilon;aabb, Sb) R1 <br> &#8866; &delta;(q, aabb, aSbb) R3<br> &#8866; &delta;(q, &epsilon;abb, Sbb) R2<br> &#8866; &delta;(q, abb, abb) R3<br>                    &#8866; &delta;(q, bb, bb) R4<br> &#8866; &delta;(q, b, b) R4<br> &#8866; &delta;(q, &epsilon;, z0) R5<br> &#8866; &delta;(q, &epsilon;)<br> ACCEPT
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

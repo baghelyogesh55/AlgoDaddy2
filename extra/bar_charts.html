@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script>
+        window.onload = function() {
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2", // "light1", "light2", "dark1", "dark2"
+                title: {
+                    text: "TOC Marks"
+                },
+                axisY: {
+                    title: "axisY Title",
+                    maximum: 100,
+                    minimum: 0,
+                    interval: 20
+                },
+
+                data: [{
+                    type: "column",
+                    showInLegend: true,
+                    legendMarkerColor: "grey",
+                    legendText: "Marks are in percentage",
+                    dataPoints: [{
+                        y: 50,
+                        label: "Topic 1"
+                    }, {
+                        y: 100,
+                        label: "Topic 2"
+                    }, {
+                        y: 70,
+                        label: "Topic 3"
+                    }, {
+                        y: 55,
+                        label: "Topic 4"
+                    }, {
+                        y: 78,
+                        label: "Topic 5"
+                    }]
+                }]
+            });
+            chart.render();
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 400px; width: 80%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+
+</html>

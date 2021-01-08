@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_29.html">
+                    <li>Turing Machine</li>
+                </a>
+                <a href="Topic_30.html">
+                    <li>Variation of Turing Machine</li>
+                </a>
+                <a href="Topic_31.html" class="active">
+                    <li>NP Hard and NP-Complete Classes</li>
+                </a>
+                <a href="Topic_32.html">
+                    <li>Language Decidability</li>
+                </a>
+                <a href="Topic_33.html">
+                    <li>Undecidable Languages</li>
+                </a>
+                <a href="Topic_34.html">
+                    <li>Halting Problem</li>
+                </a>
+                <a href="Topic_35.html">
+                    <li>Post Correspondence Problem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="content1">
+            <h1>NP Hard and NP-Complete Classes</h1><br>
+            <p>A problem is in the class NPC if it is in NP and is as <b>hard</b> as any problem in NP. A problem is <b>NP-hard</b> if all problems in NP are polynomial time reducible to it, even though it may not be in NP itself.</p><br>
+            <img src="/design_and_analysis_of_algorithms/images/np_hard.jpg" alt="NP-hard" /><br>
+            <p>If a polynomial time algorithm exists for any of these problems, all problems in NP would be polynomial time solvable. These problems are called <b>NP-complete</b>. The phenomenon of NP-completeness is important for both theoretical and practical
+                reasons.
+            </p><br>
+            <h2>Definition of NP-Completeness</h2><br>
+            <p>A language <b>B</b> is <b><i>NP-complete</i></b> if it satisfies two conditions</p><br>
+            <ul class="list">
+                <li>
+                    <p><b>B</b> is in NP</p>
+                </li><br>
+                <li>
+                    <p>Every <b>A</b> in NP is polynomial time reducible to <b>B</b>.</p><br>
+                </li><br>
+            </ul>
+            <p>If a language satisfies the second property, but not necessarily the first one, the language <b>B</b> is known as <b>NP-Hard</b>. Informally, a search problem <b>B</b> is <b>NP-Hard</b> if there exists some <b>NP-Complete</b> problem <b>A</b>                that Turing reduces to <b>B</b>.</p><br>
+            <p>The problem in NP-Hard cannot be solved in polynomial time, until <b>P = NP</b>. If a problem is proved to be NPC, there is no need to waste time on trying to find an efficient algorithm for it. Instead, we can focus on design approximation
+                algorithm.
+            </p><br>
+            <h2>NP-Complete Problems</h2><br>
+            <p>Following are some NP-Complete problems, for which no polynomial time algorithm is known.</p><br>
+            <ul class="list">
+                <li>Determining whether a graph has a Hamiltonian cycle</li><br>
+                <li>Determining whether a Boolean formula is satisfiable, etc.</li><br>
+            </ul>
+            <h2>NP-Hard Problems</h2><br>
+            <p>The following problems are NP-Hard</p><br>
+            <ul class="list">
+                <li>The circuit-satisfiability problem </li><br>
+                <li>Set Cover </li><br>
+                <li>Vertex Cover</li><br>
+                <li>Travelling Salesman Problem</li><br>
+            </ul>
+            <p>In this context, now we will discuss TSP is NP-Complete</p><br>
+            <h2>TSP is NP-Complete</h2><br>
+            <p>The traveling salesman problem consists of a salesman and a set of cities. The salesman has to visit each one of the cities starting from a certain one and returning to the same city. The challenge of the problem is that the traveling salesman
+                wants to minimize the total length of the trip</p><br>
+            <h2>Proof</h2><br>
+            <p>To prove <b><i>TSP is NP-Complete</i></b>, first we have to prove that <b><i>TSP belongs to NP</i></b>. In TSP, we find a tour and check that the tour contains each vertex once. Then the total cost of the edges of the tour is calculated. Finally,
+                we check if the cost is minimum. This can be completed in polynomial time. Thus <b><i>TSP belongs to NP</i></b>.</p>
+            <p>Secondly, we have to prove that <b><i>TSP is NP-hard</i></b>. To prove this, one way is to show that <b><i>Hamiltonian cycle &le;<sub>p</sub> TSP</i></b> (as we know that the Hamiltonian cycle problem is NPcomplete).</p><br>
+            <p>Assume <b><i>G = (V, E)</i></b> to be an instance of Hamiltonian cycle.</p><br>
+            <p>Hence, an instance of TSP is constructed. We create the complete graph <b><i>G<sup>'</sup> = (V, E<sup>'</sup>)</i></b>, where</p><br>
+            <p>$$E^{'}=\lbrace(i, j)\colon i, j \in V \:\:and\:i\neq j$$</p><br>
+            <p>Thus, the cost function is defined as follows &minus;</p><br>
+            <p>$$t(i,j)=\begin{cases}0 & if\: (i, j)\: \in E\\1 & otherwise\end{cases}$$</p><br>
+            <p>Now, suppose that a Hamiltonian cycle <b><i>h</i></b> exists in <b><i>G</i></b>. It is clear that the cost of each edge in <b><i>h</i></b> is <b>0</b> in <b><i>G<sup>'</sup></i></b> as each edge belongs to <b><i>E</i></b>. Therefore, <b><i>h</i></b>                has a cost of <b>0</b> in <b><i>G<sup>'</sup></i></b>. Thus, if graph <b><i>G</i></b> has a Hamiltonian cycle, then graph <b><i>G<sup>'</sup></i></b> has a tour of <b>0</b> cost.</p><br>
+            <p>Conversely, we assume that <b><i>G<sup>'</sup></i></b> has a tour <b><i>h<sup>'</sup></i></b> of cost at most <b>0</b>. The cost of edges in <b><i>E<sup>'</sup></i></b> are <b>0</b> and <b>1</b> by definition. Hence, each edge must have a
+                cost of <b>0</b> as the cost of <b><i>h<sup>'</sup></i></b> is <b>0</b>. We therefore conclude that <b><i>h<sup>'</sup></i></b> contains only edges in <b><i>E</i></b>.</p><br>
+            <p>We have thus proven that <b><i>G</i></b> has a Hamiltonian cycle, if and only if <b><i>G<sup>'</sup></i></b> has a tour of cost at most <b>0</b>. TSP is NP-complete.</p><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

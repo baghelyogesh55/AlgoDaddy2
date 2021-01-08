@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="../firebase.js"></script>
+    <script src="../myscript.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            padding: 10px;
+            margin: 40px;
+        }
+        
+        input {
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sign Up</h1>
+    <form>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" id="fn"></td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td><input type="text" id="sn"></td>
+            </tr>
+            <tr>
+                <th>Email : </th>
+                <td><input type="email" id="email" autocomplete="username" required></td>
+            </tr>
+            <tr>
+                <th>Password : </th>
+                <td><input id="pwd" type="password" autocomplete="new-password" required></td>
+            </tr>
+            <tr>
+                <th>Confirm Password : </th>
+                <td><input id="cpwd" type="password" autocomplete="new-password" required></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td><button class="btn btn-danger" onclick="btnSignUp()">Sign Up</button></td><br>
+            </tr>
+            <tr>
+                <td><a href="signin.html">Go to the sign in Page</a></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

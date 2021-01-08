@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program to calculate total marks</title>
+    <script>
+        let student = {
+            name: "Sumit",
+            age: 15,
+            phy: 45,
+            chem: 50,
+            math: 65
+        };
+        var sum = 0;
+        for (key in student) {
+            if (typeof(student[key]) == "number") {
+                sum += student[key];
+            }
+        }
+        sum -= student.age;
+        document.write("Total marks : " + sum);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

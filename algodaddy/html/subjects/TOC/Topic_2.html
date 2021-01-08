@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Finite Automata</title>
+    <link rel="icon" href="../../../images/logo.svg" type="image/gif">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/style copy.css" type="text/css" />
+    <link rel="stylesheet" href="../page.css" />
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+    <script src="../../../js/firebase.js"></script>
+    <script src="check.js"></script>
+
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+
+            // make it as accordion for smaller screens
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        }); // jquery end
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top">
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto " href="../../../index.html"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a>
+        <button class="navbar-toggler align-self-start" id="btnToggle" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end  p-3 p-lg-0 mt-5 mt-lg-0 mobileMenu" id="main_nav">
+
+            <ul class="navbar-nav mr-auto align-self-stretch">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i><span> Categories</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">College Course &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../../college/first_year.html">First Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/second_year.html">Second Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/third_year.html"> Third Year</a></li>
+                                <li><a class="dropdown-item" href="../../college/fourth_year.html"> Fourth Year</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Extra &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">App Development</a></li>
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Languages &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">C</a></li>
+                                <li><a class="dropdown-item" href="#">C++</a></li>
+                                <li><a class="dropdown-item" href="#">Java</a></li>
+                                <li><a class="dropdown-item" href="#">Python</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-graduation-cap"></i><span> Placements</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../../placements/Interview Tips.html">Interview Tips</a></li>
+                        <li><a class="dropdown-item" href="../../placements/HR Interview Questions.html">HR Interview Questions</a></li>
+                        <li><a class="dropdown-item" href="../../placements/TCS.html">TCS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-book"></i><span> Exams</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../../exams/gate.html">Gate</a></li>
+                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="../../about/aboutUs.html">
+                        <i class="fa fa-user"></i><span> About Us</span></a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav navbar-right" id="loginul">
+                <li class="nav-item profileSignIn">
+                    <a class="nav-link text-white" href="../../login/login.html?#"><img src="../../../images/user2.png" height="40px" width="40px" />Sign In</a>
+                </li>
+                <li class="nav-item dropdown profileName" style="display: none;">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <img id="userPic" height="40px" width="40px" />
+                        <span id="userName"> Name</span></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="../../login/profile.html">My Profile</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="Logout();">Logout</a></li>
+                    </ul>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- navbar-collapse.// -->
+    </nav>
+
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_1.html">
+                    <li>Introduction to Automata theory</li>
+                </a>
+                <a href="Topic_2.html" class="active">
+                    <li>Finite Automata</li>
+                </a>
+                <a href="Topic_3.html">
+                    <li>Moore Machine</li>
+                </a>
+                <a href="Topic_4.html">
+                    <li>Mealy Machine</li>
+                </a>
+                <a href="Topic_5.html">
+                    <li>Conversion of moore to mealy machine</li>
+                </a>
+                <a href="Topic_6.html">
+                    <li>Conversion of mealy to moore machine</li>
+                </a>
+                <a href="#" onclick="checkModule1();">
+                    <li>Practice / Quiz</li>
+                </a>
+                <br><br><br>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div>
+            <h1>Finite Automata</h1><br>
+            <p class="p2">
+                <p><u>Finite Automata(FA)</u> is the simplest machine to recognize patterns.The finite automata or finite state machine is an abstract machine which have five elements or tuple. It has a set of states and rules for moving from one state to
+                    another but it depends upon the applied input symbol. Basically it is an abstract model of digital computer. Following figure shows some essential features of a general automation.</p>
+                <div class="wp-caption alignnone"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200902201005/automata-300x240.png" srcset="https://media.geeksforgeeks.org/wp-content/uploads/20200902201005/automata.png 409w, https://media.geeksforgeeks.org/wp-content/uploads/20200902201005/automata-100x80.png 100w, https://media.geeksforgeeks.org/wp-content/uploads/20200902201005/automata-200x160.png 200w, https://media.geeksforgeeks.org/wp-content/uploads/20200902201005/automata-300x240.png 300w"
+                        sizes="100vw" width="300">
+                    <p class="wp-caption-text"><span class="text-big"><strong>Figure: </strong>Features of Finite Automata</span></p>
+                </div>
+                <p>The above figure shows following features of automata:</p>
+                <ol>
+                    <li>Input</li>
+                    <li>Output</li>
+                    <li>States of automata</li>
+                    <li>State relation</li>
+                    <li>Output relation
+                        <p>A Finite Automata consists of the following :&nbsp;<br />&nbsp;</li>
+                </ol>
+                <pre>Q : Finite set of states.
+                Σ : set of Input Symbols.
+                q : Initial state.
+                F : set of Final States.
+                δ : Transition Function.
+                </pre>
+                <p>Formal specification of machine is&nbsp;<br />{ Q, Σ, q, F, δ }.&nbsp;</p>
+                <p>FA is characterized into two types:&nbsp;</p>
+                <p>&nbsp;&nbsp;<br /><strong>1) Deterministic Finite Automata (DFA)</strong>&nbsp;<br />&nbsp;</p><br/>
+                <!-- <div id="AP_G4GR_5" style="min-height:280px"></div><br/> -->
+                <pre>DFA consists of 5 tuples {Q, Σ, q, F, δ}. 
+                Q : set of all states.
+                Σ : set of input symbols. ( Symbols which machine takes as input )
+                q : Initial state. ( Starting state of a machine )
+                F : set of final state.
+                δ : Transition Function, defined as δ : Q X Σ --&gt; Q.
+                </pre>
+                <p>In a DFA, for a particular input character, the machine goes to one state only. A transition function is defined on every state for every input symbol. Also in DFA null (or ε) move is not allowed, i.e., DFA cannot change state without
+                    any input character.&nbsp;
+                </p>
+                <p>For example, below DFA with Σ = {0, 1} accepts all strings ending with 0.&nbsp;<br />&nbsp;</p>
+                <div class="wp-caption alignnone"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Finite_automata_introduction_1.jpg" alt="DFA1-300x208">
+                    <p class="wp-caption-text"><span class="text-big"><strong>Figure:</strong> DFA with &nbsp;Σ = {0, 1}&nbsp;</span></p>
+                </div>
+                <p>One important thing to note is, <i><strong>there can be many possible DFAs for a pattern</strong></i>. A DFA with minimum number of states is generally preferred.&nbsp;</p>
+                <p>&nbsp;&nbsp;<br /><strong>2) Nondeterministic Finite Automata(NFA)</strong>&nbsp;<br />NFA is similar to DFA except following additional features:&nbsp;<br />1. Null (or ε) move is allowed i.e., it can move forward without reading symbols.&nbsp;
+                    <br />2. Ability to transmit to any number of states for a particular input.&nbsp;<br />However, these above features don&#8217;t add any power to NFA. If we compare both in terms of power, both are equivalent.&nbsp;</p>
+                <p>Due to above additional features, NFA has a different transition function, rest is same as DFA.&nbsp;</p>
+                <pre>δ: Transition Function
+                δ:&nbsp; Q X (Σ U ε ) --&gt; 2 ^ Q. 
+                </pre>
+                <p>As you can see in transition function is for any input including null (or ε), NFA can go to any state number of states.&nbsp;<br />For example, below is a NFA for above problem&nbsp;<br />&nbsp;</p>
+                <div class="wp-caption alignnone"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Finite_automata_introduction_2.jpg" alt="NFA">
+                    <p class="wp-caption-text"><span class="text-big"><strong>NFA</strong></span></p>
+                </div>
+                <p>One important thing to note is, <i><strong>in NFA, if any path for an input string leads to a final state, then the input string accepted</strong></i>. For example, in above NFA, there are multiple paths for input string &#8220;00&#8221;.
+                    Since, one of the paths leads to a final state, &#8220;00&#8221; is accepted by above NFA.&nbsp;</p>
+                <p>&nbsp;&nbsp;<br /><strong>Some Important Points:</strong>&nbsp;<br />&nbsp;</p>
+                <ul>
+                    <li><strong>Justification:&nbsp;</strong></li>
+                </ul>
+                <div>Since all the tuples in DFA and NFA are the same except for one of the tuples, which is Transition Function (δ)&nbsp;</div>
+                <pre>In case of DFA
+                     δ : Q X Σ --&gt; Q
+                     In case of NFA
+                     δ : Q X Σ --&gt; 2<sup>Q</sup>
+                </pre>
+                <p>Now if you observe you’ll find out Q X Σ &#8211;&gt; Q is part of Q X Σ &#8211;&gt; 2<sup>Q</sup>.</p>
+                <p>In the RHS side, Q is the subset of 2<sup>Q</sup> which indicates Q is contained in 2<sup>Q</sup> or Q is a part of 2<sup>Q</sup>, however, the reverse isn’t true. So mathematically, we can conclude that <strong>every DFA is NFA but not vice-versa</strong>.
+                    Yet there is a way to convert an NFA to DFA, so <strong>there exists an equivalent DFA for every NFA</strong>.&nbsp;<br />&nbsp;</div>
+        <p>1. Both NFA and DFA have same power and each NFA can be translated into a DFA.&nbsp;<br />2. There can be multiple final states in both DFA and NFA.&nbsp;<br />3. NFA is more of a theoretical concept.&nbsp;<br />4. DFA is used in Lexical Analysis
+            in Compiler.&nbsp;</p>
+        <p>See Quiz on <a href="http://quiz.geeksforgeeks.org/regular-languages-and-finite-automata/">Regular Expression and Finite Automata</a>.&nbsp;</p>
+        <p>Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above<br />&nbsp;</p>
+        </p>
+        <p>Attention reader! Don’t stop learning now. Get hold of all the important CS Theory concepts for SDE interviews with the <a href='https://practice.geeksforgeeks.org/courses/SDE-theory?vC=1'>CS Theory Course</a> at a student-friendly price and become
+            industry ready.</p>
+        <div id="personalNoteDiv" class="clear hideIt">
+            <div class="personalNoteHeader clear">
+                <span class="noteHeaderText">My Personal Notes</span>
+                <span class="hideNotesDivIcon"><i class="material-icons personalNotesIcon">arrow_drop_up</i></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".navbar-toggler").on("click", function() {
+                $(".mobileMenu").toggleClass("open");
+            })
+        });
+    </script>
+</body>
+
+</html>

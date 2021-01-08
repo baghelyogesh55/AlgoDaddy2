@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProfile</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-storage.js"></script>
+    <script src="../firebase.js"></script>
+    <script src="myprofile.js"></script>
+    <script src="../myscript.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        body {
+            margin: 20px;
+        }
+        
+        #profile {
+            display: flex;
+            justify-content: center;
+        }
+        
+        div {
+            text-align: center;
+            margin: 20px auto;
+        }
+        
+        img {
+            border-radius: 60px;
+            border: 2px solid black;
+            cursor: pointer;
+            display: block;
+        }
+        
+        a {
+            display: none;
+        }
+        
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3 style="color: darkslategrey;">My Profile</h3>
+        <div id="profile">
+            <img src="profilePic.jpg" id="i1" height="100px" width="100px">
+        </div>
+
+
+        <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;"></p>
+        <p><label for="file" style="cursor: pointer;" class="btn btn-primary">Change Profile Pic</label></p>
+        <!-- <input type="file" id="img" name="img" accept="image/*" style="display: none;"> -->
+
+        <strong>Name : </strong>
+        <span id="mssg"></span><br>
+        <strong>Email : </strong>
+        <span id="email"></span>
+        <br><br>
+        <button onclick="showBarGraph()" class="btn btn-danger">Result in Bar Graph</button>
+        <button onclick="showLineGraph()" class="btn btn-danger">Result in Line Graph</button>
+        <div id="c1" style="height: 300px; width: 80%;display: none;"></div>
+        <div id="c2" style="height: 300px; width: 80%;display: none;"></div>
+        <div id="c3" style="height: 300px; width: 80%;display: none;"></div>
+        <div id="c4" style="height: 300px; width: 80%;display: none;"></div>
+
+        <div id="d1" style="height: 300px; width: 80%;display: none;"></div>
+        <div id="d2" style="height: 300px; width: 80%;display: none;"></div>
+        <div id="d3" style="height: 300px; width: 80%;display: none;"></div>
+        <div id="d4" style="height: 300px; width: 80%;display: none;"></div>
+    </div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+
+</html>

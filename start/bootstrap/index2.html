@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+    <meta name="description" content="Navigation  menu with submenu examples for any type of project, Bootstrap 4" />
+
+    <title>Demo - Bootstrap multilevel navbar responsive. html code example </title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+
+
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+
+            // make it as accordion for smaller screens
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        }); // jquery end
+    </script>
+
+    <style type="text/css">
+        body {
+            padding-top: 150px;
+        }
+        
+        .navbar,
+        .collapse {
+            background-color: rgb(0, 0, 100);
+        }
+        
+        .navbar-brand {
+            font-size: 30px;
+            margin-right: 100px !important;
+            margin-left: 50px !important;
+        }
+        
+        .navbar-nav {
+            color: white;
+        }
+        
+        .nav-item {
+            margin: 10px;
+        }
+        
+        .navbar .navbar-nav>li>a>i {
+            display: block;
+            text-align: center;
+        }
+        
+        i {
+            display: block;
+        }
+        
+        .navbar .dropdown-item i {
+            font-size: 16px;
+            min-width: 22px;
+        }
+        
+        .navbar .dropdown-item .material-icons {
+            font-size: 21px;
+            line-height: 16px;
+            vertical-align: middle;
+            margin-top: -2px;
+        }
+        
+        @media (min-width: 992px) {
+            .dropdown-menu .dropdown-toggle:after {
+                border-top: .3em solid transparent;
+                border-right: 0;
+                border-bottom: .3em solid transparent;
+                border-left: .3em solid;
+            }
+            .dropdown-menu .dropdown-menu {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .dropdown-menu li {
+                position: relative;
+            }
+            .nav-item .submenu {
+                display: none;
+                position: absolute;
+                left: 100%;
+                top: -7px;
+            }
+            .nav-item .submenu-left {
+                right: 100%;
+                left: auto;
+            }
+            .dropdown-menu>li:hover {
+                background-color: #f1f1f1
+            }
+            .dropdown-menu>li:hover>.submenu {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .navbar .navbar-nav>li>a>i {
+                display: inline-block;
+                text-align: left;
+                min-width: 30px;
+                position: relative;
+                top: 4px;
+            }
+            .mobileMenu {
+                position: fixed;
+                top: 20px;
+                bottom: 0;
+                margin: auto;
+                left: 0;
+                transform: translate(-100%);
+                transition: all ease 0.25s;
+                overflow: auto;
+            }
+            .open {
+                transform: translateX(0);
+            }
+            .navbar-brand {
+                font-size: 30px;
+                margin-left: 10px !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+
+    <!-- section-header.// -->
+
+    <!-- ========================= SECTION CONTENT ========================= -->
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top">
+
+
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto " href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a>
+        <button class="navbar-toggler align-self-start" id="btnToggle" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end  p-3 p-lg-0 mt-5 mt-lg-0 mobileMenu" id="main_nav">
+
+            <ul class="navbar-nav mr-auto align-self-stretch">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i><span> Categories</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">College Course &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="">First Year</a></li>
+                                <li><a class="dropdown-item" href="">Second Year</a></li>
+                                <li><a class="dropdown-item" href=""> Third Year</a></li>
+                                <li><a class="dropdown-item" href="#"> Fourth Year</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Extra &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="">App Development</a></li>
+                                <li><a class="dropdown-item" href="">Web Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Languages &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="">C</a></li>
+                                <li><a class="dropdown-item" href="">C++</a></li>
+                                <li><a class="dropdown-item" href="">Java</a></li>
+                                <li><a class="dropdown-item" href="">Python</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-graduation-cap"></i><span> Placements</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Amazon</a></li>
+                        <li><a class="dropdown-item" href="#">Microsoft</a></li>
+                        <li><a class="dropdown-item" href="#">Wipro</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-book"></i><span> Exams / Quiz</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Gate</a></li>
+                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="#">
+                        <i class="fa fa-user"></i><span> About Us</span></a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav ml-auto" id="loginul">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">
+                        <h3> Login</h3>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+        <!-- navbar-collapse.// -->
+
+    </nav>
+    </div>
+    <section class="section-content mt-auto container">
+
+        <h6>Demo view: Bootstrap multilevel dropdown menu </h6>
+        <p>For this demo page you should connect to the internet to receive files from CDN like Bootstrap CSS, Bootstrap JS and jQuery. </p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+        <a href="http://bootstrap-menu.com/multilevel.html" class="btn btn-warning">Back to tutorial or Download code</a>
+
+    </section>
+
+    <div class="container"></div>
+
+    <!-- container //  -->
+    <script>
+        $(document).ready(function() {
+            $(".navbar-toggler").on("click", function() {
+                $(".mobileMenu").toggleClass("open");
+            })
+        });
+    </script>
+</body>
+
+</html>

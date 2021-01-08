@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn page</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            padding: 10px;
+            margin: 40px;
+        }
+        
+        input {
+            width: 250px;
+        }
+        
+        span {
+            font-weight: 700;
+            margin: 5px;
+            margin-top: 20px;
+        }
+        
+        button {
+            margin: 20px;
+            margin-left: 0px;
+        }
+        
+        a {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sign In</h1>
+    <br>
+    <div>
+        <form>
+            <span>Email :</span><br>
+            <input type="email" required pwd id="email" autocomplete="username"><br><br>
+            <span>Password :</span><br>
+            <input type="password" reuired id="pwd" autocomplete="current-password"></td><br>
+        </form>
+        <button class="btn btn-danger" onclick="signin()">Sign In</button>
+        <a href="#" onclick="reset()">Forgot password?</a>
+    </div>
+    <script src="../myscript.js"></script>
+    <script src="../firebase.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav .act {
+            background: none;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_1.html">
+                    <li class="act">Introduction to Automata theory</li>
+                </a>
+                <a href="Topic_2.html">
+                    <li>Finite Automata</li>
+                </a>
+                <a href="Topic_3.html">
+                    <li>Moore Machine</li>
+                </a>
+                <a href="Topic_4.html">
+                    <li>Mealy Machine</li>
+                </a>
+                <a href="Topic_5.html">
+                    <li>Conversion of moore to mealy machine</li>
+                </a>
+                <a href="Topic_6.html" class="active">
+                    <li>Conversion of mealy to moore machine</li>
+                </a>
+                <a href="quiz.html">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div>
+            <h1 class="h1" style="font-size: xx-large; font-style: oblique;">Conversion from Mealy machine to Moore Machine</h1><br>
+            <p>In Moore machine, the output is associated with every state, and in Mealy machine, the output is given along the edge with input symbol. To convert Moore machine to Mealy machine, state output symbols are distributed to input symbol paths.
+                But while converting the Mealy machine to Moore machine, we will create a separate state for every new output symbol and according to incoming and outgoing edges are distributed.</p>
+            <p>The following steps are used for converting Mealy machine to the Moore machine:</p><br>
+            <p><strong>Step 1:</strong> For each state(Qi), calculate the number of different outputs that are available in the transition table of the Mealy machine.</p><br>
+            <p><strong>Step 2:</strong> Copy state Qi, if all the outputs of Qi are the same. Break qi into n states as Qin, if it has n distinct outputs where n = 0, 1, 2....</p><br>
+            <p><strong>Step 3:</strong> If the output of initial state is 0, insert a new initial state at the starting which gives 1 output.</p><br>
+            <h3 class="h3">Example 1:</h3><br>
+            <p>Convert the following Mealy machine into equivalent Moore machine.</p><br>
+            <img src="../../../images/con10.png" alt="Conversion from Mealy machine to Moore Machine" /><br>
+            <p><strong>Solution:</strong></p>
+            <p>Transition table for above Mealy machine is as follows:</p><br>
+            <img src="../../../images/con11.png" alt="Conversion from Mealy machine to Moore Machine" /><br>
+            <ul class="points">
+                <li>For state q1, there is only one incident edge with output 0. So, we don't need to split this state in Moore machine.</li><br>
+                <li>For state q2, there is 2 incident edge with output 0 and 1. So, we will split this state into two states q20( state with output 0) and q21(with output 1).</li><br>
+                <li>For state q3, there is 2 incident edge with output 0 and 1. So, we will split this state into two states q30( state with output 0) and q31( state with output 1).</li><br>
+                <li>For state q4, there is only one incident edge with output 0. So, we don't need to split this state in Moore machine.</li><br>
+            </ul>
+            <p>Transition table for Moore machine will be:</p><br>
+            <img src="../../../images/con12.png" alt="Conversion from Mealy machine to Moore Machine" /><br>
+            <p>Transition diagram for Moore machine will be:</p><br>
+            <img src="../../../images/con13.png" alt="Conversion from Mealy machine to Moore Machine" /><br>
+            <h3 class="h3">Example 2:</h3><br>
+            <p>Convert the following Mealy machine into equivalent Moore machine.</p><br>
+            <img src="../../../images/con14.png" alt="Conversion from Mealy machine to Moore Machine" /><br>
+            <p><strong>Solution:</strong></p><br>
+            <p>Transition table for above Mealy machine is as follows:</p><br>
+            <img src="../../../images/con15.png" alt="Conversion from Mealy machine to Moore Machine" /><br>
+            <p>The state q1 has only one output. The state q2 and q3 have both output 0 and 1. So we will create two states for these states. For q2, two states will be q20(with output 0) and q21(with output 1). Similarly, for q3 two states will be q30(with
+                output 0) and q31(with output 1).</p><br>
+            <p>Transition table for Moore machine will be:</p><br>
+            <img src="../../../images/con16.png" alt="Conversion from Mealy machine to Moore Machine" /><br>
+            <p>Transition diagram for Moore machine will be:</p><br>
+            <img src="../../../images/con17.png" alt="Conversion from Mealy machine to Moore Machine" /><br>
+        </div>
+    </div>

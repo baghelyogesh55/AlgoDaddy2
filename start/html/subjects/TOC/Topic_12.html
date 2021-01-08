@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_8.html">
+                    <li> Non Deterministic Finite Automata (NFA)</li>
+                </a>
+                <a href="Topic_9.html">
+                    <li>Deterministic finite automata machines(DFA)</li>
+                </a>
+                <a href="Topic_10.html">
+                    <li>conversion of NFA to DFA</li>
+                </a>
+                <a href="Topic_11.html">
+                    <li>minimization of automata machines</li>
+                </a>
+                <a href="Topic_12.html" class="active">
+                    <li>regular expression</li>
+                </a>
+                <a href="Topic_13.html">
+                    <li>Arden’s theorem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Regular Expression</h1><br>
+            <ul class="points">
+                <li>The language accepted by finite automata can be easily described by simple expressions called Regular Expressions. It is the most effective way to represent any language.</li><br>
+                <li>The languages accepted by some regular expression are referred to as Regular languages.</li><br>
+                <li>A regular expression can also be described as a sequence of pattern that defines a string.</li><br>
+                <li>Regular expressions are used to match character combinations in strings. String searching algorithm used this pattern to find the operations on a string.</li><br>
+            </ul>
+            <p><strong>For instance:</strong></p><br>
+            <p>In a regular expression, x* means zero or more occurrence of x. It can generate {e, x, xx, xxx, xxxx, .....}</p><br>
+            <p>In a regular expression, x<sup>+</sup> means one or more occurrence of x. It can generate {x, xx, xxx, xxxx, .....}</p><br>
+            <h2 class="h3">Operations on Regular Language</h2><br>
+            <p>The various operations on regular language are:</p><br>
+            <p><strong>Union:</strong> If L and M are two regular languages then their union L U M is also a union.</p><br>
+            <div class="codeblock">
+                <p>
+                    1. L U M = {s | s is in L or s is in M}
+                </p>
+            </div><br>
+            <p><strong>Intersection:</strong> If L and M are two regular languages then their intersection is also an intersection.</p><br>
+            <div class="codeblock">
+                <p>
+                    1. L &#8898; M = {st | s is in L and t is in M}
+                </p>
+            </div><br>
+            <p><strong>Kleen closure:</strong> If L is a regular language then its Kleen closure L1* will also be a regular language.</p><br>
+            <div class="codeblock">
+                <p>
+                    1. L* = Zero or more occurrence of language L.
+                </p>
+            </div><br>
+            <h3 class="h3">Example 1:</h3><br>
+            <p>Write the regular expression for the language accepting all combinations of a's, over the set &sum; = {a}</p><br>
+            <p><strong>Solution:</strong></p>
+            <p>All combinations of a's means a may be zero, single, double and so on. If a is appearing zero times, that means a null string. That is we expect the set of {&#949;, a, aa, aaa, ....}. So we give a regular expression for this as:</p><br>
+            <div class="codeblock">
+                <p>
+                    R = a*
+                </p>
+            </div>
+            <p>That is Kleen closure of a.</p><br>
+            <h3 class="h3">Example 2:</h3><br>
+            <p>Write the regular expression for the language accepting all combinations of a's except the null string, over the set &sum; = {a}</p><br>
+            <p><strong>Solution:</strong></p>
+            <p>The regular expression has to be built for the language</p><br>
+            <div class="codeblock">
+                <p>
+                    L = {a, aa, aaa, ....}
+                </p>
+            </div><br>
+            <p>This set indicates that there is no null string. So we can denote regular expression as:</p><br>
+            <div class="codeblock"><pre>
+            R = a<sup>+</sup>
+            </pre></div><br>
+            <h3 class="h3">Example 3:</h3><br>
+            <p>Write the regular expression for the language accepting all the string containing any number of a's and b's.</p><br>
+            <p><strong>Solution:</strong></p>
+            <p>The regular expression will be:</p><br>
+            <div class="codeblock">
+                <<p>
+                    r.e. = (a + b)*
+                    </p>
+            </div><br>
+            <p>This will give the set as L = {&#949;, a, aa, b, bb, ab, ba, aba, bab, .....}, any combination of a and b.</p>
+            <p>The (a + b)* shows any combination with a and b even a null string.</p><br>
+        </div>
+    </div>
+</body>
+
+</html>

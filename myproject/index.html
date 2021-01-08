@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="firebase.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        a {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .center {
+            text-align: center;
+            vertical-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="center container">
+        <a href="signup/signup.html" class="btn btn-danger">Sign In With Email</a>
+    </div>
+    <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                window.location = "signup/welcome.html";
+            } else {
+                firebase.auth().signOut();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

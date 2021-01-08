@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_15.html">
+                    <li>Type of grammers</li>
+                </a>
+                <a href="Topic_16.html">
+                    <li>Derivation Tree</li>
+                </a>
+                <a href="Topic_17.html" class="active">
+                    <li> Ambiguity in grammar</li>
+                </a>
+                <a href="Topic_18.html">
+                    <li>Simplication of CFG</li>
+                </a>
+                <a href="Topic_19.html">
+                    <li>Chomsky's Normal Form (CNF)</li>
+                </a>
+                <a href="Topic_20.html">
+                    <li>Greibach Normal Form (GNF)</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Ambiguity in Grammar</h1><br>
+            <p>A grammar is said to be ambiguous if there exists more than one leftmost derivation or more than one rightmost derivation or more than one parse tree for the given input string. If the grammar is not ambiguous, then it is called unambiguous.</p><br>
+            <p>If the grammar has ambiguity, then it is not good for compiler construction. No method can automatically detect and remove the ambiguity, but we can remove ambiguity by re-writing the whole grammar without ambiguity.</p><br>
+            <h3 class="h3">Example 1:</h3><br>
+            <p>Let us consider a grammar G with the production rule</p><br>
+            <div class="codeblock">
+                <p>
+                    E &rarr; I E &rarr; E + E E &rarr; E * E E &rarr; (E) I &rarr; &epsilon; | 0 | 1 | 2 | ... | 9
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>For the string "3 * 2 + 5", the above grammar can generate two parse trees by leftmost derivation:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-ambiguity-in-grammar-solution1.png" alt="Ambiguity in Grammar" /><br>
+            <p>Since there are two parse trees for a single string "3 * 2 + 5", the grammar G is ambiguous.</p><br>
+            <h3 class="h3">Example 2:</h3><br>
+            <p>Check whether the given grammar G is ambiguous or not.</p><br>
+            <div class="codeblock">
+                <p>
+                    E &rarr; E + E E &rarr; E - E E &rarr; id
+                </p>
+            </div><br>
+            <p class="pq"><strong>Solution:</strong></p>
+            <p>From the above grammar String "id + id - id" can be derived in 2 ways:</p><br>
+            <p><strong>First Leftmost derivation</strong></p><br>
+            <div class="codeblock">
+                <p>
+                    E &rarr; E + E &rarr; id + E &rarr; id + E - E &rarr; id + id - E &rarr; id + id- id
+                </p>
+            </div><br>
+            <p><strong>Second Leftmost derivation</strong></p><br>
+            <div class="codeblock">
+                <p>
+                    E &rarr; E - E &rarr; E + E - E &rarr; id + E - E &rarr; id + id - E &rarr; id + id - id
+                </p>
+            </div><br>
+            <p>Since there are two leftmost derivation for a single string "id + id - id", the grammar G is ambiguous.</p><br>
+            <h3 class="h3">Example 3:</h3><br>
+            <p>Check whether the given grammar G is ambiguous or not.</p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; aSb | SS S &rarr; &epsilon;
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>For the string "aabb" the above grammar can generate two parse trees</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-ambiguity-in-grammar-solution3.png" alt="Ambiguity in Grammar" /><br>
+            <p>Since there are two parse trees for a single string "aabb", the grammar G is ambiguous.</p><br>
+            <h3 class="h3">Example 4:</h3><br>
+            <p>Check whether the given grammar G is ambiguous or not.</p><br>
+            <div class="codeblock">
+                <p>
+                    A &rarr; AA A &rarr; (A) A &rarr; a
+                </p>
+            </div><br>
+            <p><strong>Solution:</strong></p>
+            <p>For the string "a(a)aa" the above grammar can generate two parse trees:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/automata-ambiguity-in-grammar-solution4.png" alt="Ambiguity in Grammar" /><br>
+            <p>Since there are two parse trees for a single string "a(a)aa", the grammar G is ambiguous.</p><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

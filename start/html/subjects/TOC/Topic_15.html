@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_15.html" class="active">
+                    <li>Type of grammers</li>
+                </a>
+                <a href="Topic_16.html">
+                    <li>Derivation Tree</li>
+                </a>
+                <a href="Topic_17.html">
+                    <li> Ambiguity in grammar</li>
+                </a>
+                <a href="Topic_18.html">
+                    <li>Simplication of CFG</li>
+                </a>
+                <a href="Topic_19.html">
+                    <li>Chomsky's Normal Form (CNF)</li>
+                </a>
+                <a href="Topic_20.html">
+                    <li>Greibach Normal Form (GNF)</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Chomsky Hierarchy</h1><br>
+            <p>Chomsky Hierarchy represents the class of languages that are accepted by the different machine. The category of language in Chomsky's Hierarchy is as given below:</p><br>
+            <ol class="points">
+                <li>Type 0 known as Unrestricted Grammar.</li><br>
+                <li>Type 1 known as Context Sensitive Grammar.</li><br>
+                <li>Type 2 known as Context Free Grammar.</li><br>
+                <li>Type 3 Regular Grammar.</li><br>
+            </ol>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/chomsky-hierarchy.png" alt="Chomsky Hierarchy" /><br>
+            <p>This is a hierarchy. Therefore every language of type 3 is also of type 2, 1 and 0. Similarly, every language of type 2 is also of type 1 and type 0, etc.</p><br>
+            <h3 class="h3">Type 0 Grammar:</h3><br>
+            <p>Type 0 grammar is known as Unrestricted grammar. There is no restriction on the grammar rules of these types of languages. These languages can be efficiently modeled by Turing machines.</p><br>
+            <p><strong>For example:</strong></p><br>
+            <div class="codeblock">
+                <p>
+                    bAa &rarr; aa S &rarr; s
+                </p>
+            </div><br>
+            <h3 class="h3">Type 1 Grammar:</h3><br>
+            <p>Type 1 grammar is known as Context Sensitive Grammar. The context sensitive grammar is used to represent context sensitive language. The context sensitive grammar follows the following rules:</p><br>
+            <ul class="points">
+                <li>The context sensitive grammar may have more than one symbol on the left hand side of their production rules.</li><br>
+                <li>The number of symbols on the left-hand side must not exceed the number of symbols on the right-hand side.</li><br>
+                <li>The rule of the form A &rarr; &epsilon; is not allowed unless A is a start symbol. It does not occur on the right-hand side of any rule. </li><br>
+                <li>The Type 1 grammar should be Type 0. In type 1, Production is in the form of V &rarr; T</li><br>
+            </ul>
+            <p>Where the count of symbol in V is less than or equal to T.</p><br>
+            <p><strong>For example:</strong></p><br>
+            <div class="codeblock">
+                <p>
+                    S &rarr; AT T &rarr; xy A &rarr; a
+                </p>
+            </div><br>
+            <h3 class="h3">Type 2 Grammar:</h3><br>
+            <p>Type 2 Grammar is known as Context Free Grammar. Context free languages are the languages which can be represented by the context free grammar (CFG). Type 2 should be type 1. The production rule is of the form</p><br>
+            <div class="codeblock">
+                <p>
+                    A &rarr; &alpha;
+                </p>
+            </div><br>
+            <p>Where A is any single non-terminal and is any combination of terminals and non-terminals.</p><br>
+            <p>
+                <Strong>For example:</strong><br>
+            </p>
+            <div class="codeblock">
+                <p>
+                    A &rarr; aBb A &rarr; b B &rarr; a
+                </p>
+            </div><br>
+            <h3 class="h3">Type 3 Grammar:</h3><br>
+            <p>Type 3 Grammar is known as Regular Grammar. Regular languages are those languages which can be described using regular expressions. These languages can be modeled by NFA or DFA.</p><br>
+            <p>Type 3 is most restricted form of grammar. The Type 3 grammar should be Type 2 and Type 1. Type 3 should be in the form of</p><br>
+            <div class="codeblock">
+                <p>
+                    V &rarr; T*V / T*
+                </p>
+            </div><br>
+            <p><strong>For example:</strong></p>
+            <div class="codeblock">
+                <p>
+                    A &rarr; xy<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

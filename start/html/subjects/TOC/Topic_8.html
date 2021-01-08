@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_8.html" class="active">
+                    <li class="act"> Non Deterministic Finite Automata (NFA)</li>
+                </a>
+                <a href="Topic_9.html">
+                    <li>Deterministic finite automata machines(DFA)</li>
+                </a>
+                <a href="Topic_10.html">
+                    <li>conversion of NFA to DFA</li>
+                </a>
+                <a href="Topic_11.html">
+                    <li>minimization of automata machines</li>
+                </a>
+                <a href="Topic_12.html">
+                    <li>regular expression</li>
+                </a>
+                <a href="Topic_13.html">
+                    <li>Arden’s theorem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">NFA (Non-Deterministic finite automata)</h1><br>
+            <ul class="points">
+                <li>NFA stands for non-deterministic finite automata. It is easy to construct an NFA than DFA for a given regular language.</li>
+                <li>The finite automata are called NFA when there exist many paths for specific input from the current state to the next state.</li>
+                <li>Every NFA is not DFA, but each NFA can be translated into DFA.</li><br>
+                <li>NFA is defined in the same way as DFA but with the following two exceptions, it contains multiple next states, and it contains &epsilon; transition.</li><br>
+            </ul>
+            <p>In the following image, we can see that from state q0 for input a, there are two next states q1 and q2, similarly, from q0 for input b, the next states are q0 and q1. Thus it is not fixed or determined that with a particular input where to
+                go next. Hence this FA is called non-deterministic finite automata.</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/nfa.png" alt="Non-Deterministic finite automata" /><br>
+            <h2 class="h2">Formal definition of NFA:</h2><br>
+            <p>NFA also has five states same as DFA, but with different transition function, as shown follows:</p><br>
+            <div class="codeblock"><pre>
+            &delta;: Q x &sum; &rarr;2<sup>Q</sup>
+            </pre></div>
+            <p>where,</p><br>
+            <div class="codeblock">
+                <p>
+                    Q: finite set of states<br> &sum;: finite set of the input symbol<br> q0: initial state <br> F: final state<br> &delta;: Transition function</p><br>
+                </textarea>
+            </div>
+            <h2 class="h2">Graphical Representation of an NFA</h2><br>
+            <p>An NFA can be represented by digraphs called state diagram. In which:</p>
+            <ol class="points">
+                <li>The state is represented by vertices.</li>
+                <li>The arc labeled with an input character show the transitions.</li>
+                <li>The initial state is marked with an arrow.</li>
+                <li>The final state is denoted by the double circle.</li>
+            </ol><br>
+            <h3 class="h3">Example 1:</h3><br>
+            <div class="codeblock">
+                <p>
+                    Q = {q0, q1, q2} &sum; = {0, 1} q0 = {q0} F = {q2}</p>
+                </textarea>
+            </div>
+            <p><strong>Solution:</strong></p>
+            <p>Transition diagram:</p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/nfa2.png" alt="Non-Deterministic finite automata" /><br>
+            <p>Transition Table:</p><br>
+            <table class="alt">
+                <tr>
+                    <th>Present State</th>
+                    <th>Next state for Input 0</th>
+                    <th>Next State of Input 1</th>
+                </tr>
+                <tr>
+                    <td>&rarr;q0</td>
+                    <td>q0, q1</td>
+                    <td>q1</td>
+                </tr>
+                <tr>
+                    <td>q1</td>
+                    <td>q2</td>
+                    <td>q0</td>
+                </tr>
+                <tr>
+                    <td>*q2</td>
+                    <td>q2</td>
+                    <td>q1, q2</td>
+                </tr>
+            </table><br>
+            <p>In the above diagram, we can see that when the current state is q0, on input 0, the next state will be q0 or q1, and on 1 input the next state will be q1. When the current state is q1, on input 0 the next state will be q2 and on 1 input, the
+                next state will be q0. When the current state is q2, on 0 input the next state is q2, and on 1 input the next state will be q1 or q2.</p><br>
+            <h3 class="h3">Example 2:</h3><br>
+            <p>NFA with &sum; = {0, 1} accepts all strings with 01.</p>
+            <p><strong>Solution:</strong></p>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/nfa3.png" alt="Non-Deterministic finite automata" /><br>
+            <p>Transition Table:</p><br>
+            <table class="alt">
+                <tr>
+                    <th>Present State</th>
+                    <th>Next state for Input 0</th>
+                    <th>Next State of Input 1</th>
+                </tr>
+                <tr>
+                    <td>&rarr;q0</td>
+                    <td>q1</td>
+                    <td>&epsilon;</td>
+                </tr>
+                <tr>
+                    <td>q1</td>
+                    <td>&epsilon;</td>
+                    <td>q2</td>
+                </tr>
+                <tr>
+                    <td>*q2</td>
+                    <td>q2</td>
+                    <td>q2</td>
+                </tr>
+            </table><br>
+            <h3 class="h3">Example 3:</h3><br>
+            <p>NFA with &sum; = {0, 1} and accept all string of length atleast 2.</p>
+            <p><strong>Solution:</strong></p>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/nfa4.png" alt="Non-Deterministic finite automata" /><br>
+            <p>Transition Table:</p><br>
+            <table class="alt">
+                <tr>
+                    <th>Present State</th>
+                    <th>Next state for Input 0</th>
+                    <th>Next State of Input 1</th>
+                </tr>
+                <tr>
+                    <td>&rarr;q0</td>
+                    <td>q1</td>
+                    <td>q1</td>
+                </tr>
+                <tr>
+                    <td>q1</td>
+                    <td>q2</td>
+                    <td>q2</td>
+                </tr>
+                <tr>
+                    <td>*q2</td>
+                    <td>&epsilon;</td>
+                    <td>&epsilon;</td>
+                </tr>
+            </table><br>
+        </div>
+    </div>
+</body>
+
+</html>

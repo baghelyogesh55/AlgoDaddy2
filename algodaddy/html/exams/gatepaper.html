@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+    <meta name="description" content="Navigation  menu with submenu examples for any type of project, Bootstrap 4" />
+
+    <title>Gate Papers</title>
+    <link rel="icon" href="../../images/logo.svg" type="image/gif">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/placeholder.css" type="text/css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="../../js/firebase.js"></script>
+
+
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+
+            // make it as accordion for smaller screens
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        }); // jquery end
+    </script>
+    <style>
+        @media (max-width: 600px) {
+            .content {
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top">
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto " href="../../index.html"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a>
+        <button class="navbar-toggler align-self-start" id="btnToggle" type="button" data-toggle="collapse" data-target="#main_nav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end  p-3 p-lg-0 mt-5 mt-lg-0 mobileMenu" id="main_nav">
+
+            <ul class="navbar-nav mr-auto align-self-stretch">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i><span> Categories</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">College Course &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../college/first_year.html">First Year</a></li>
+                                <li><a class="dropdown-item" href="../college/second_year.html">Second Year</a></li>
+                                <li><a class="dropdown-item" href="../college/third_year.html"> Third Year</a></li>
+                                <li><a class="dropdown-item" href="../college/fourth_year.html"> Fourth Year</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Extra &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">App Development</a></li>
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Languages &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">C</a></li>
+                                <li><a class="dropdown-item" href="#">C++</a></li>
+                                <li><a class="dropdown-item" href="#">Java</a></li>
+                                <li><a class="dropdown-item" href="#">Python</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-graduation-cap"></i><span> Placements</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../placements/Interview Tips.html">Interview Tips</a></li>
+                        <li><a class="dropdown-item" href="../placements/HR Interview Questions.html">HR Interview Questions</a></li>
+                        <li><a class="dropdown-item" href="../placements/TCS.html">TCS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-book"></i><span> Exams</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="gate.html">Gate</a></li>
+                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="../about/aboutUs.html">
+                        <i class="fa fa-user"></i><span> About Us</span></a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav navbar-right" id="loginul">
+                <li class="nav-item profileSignIn">
+                    <a class="nav-link text-white" href="../login/login.html?#"><img src="../../images/user2.png" height="40px" width="40px" />Sign In</a>
+                </li>
+                <li class="nav-item dropdown profileName" style="display: none;">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+
+                        <img id="userPic" height="40px" width="40px" />
+                        <span id="userName"> Name</span></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="../login/profile.html">My Profile</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="Logout();">Logout</a></li>
+                    </ul>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid content">
+        <div>
+            <h1 class="text-center">Good Luck...</h1>
+            <h2 class="text-center">Download Previous Year Papers From Below</h2>
+        </div>
+        <table border=2px; style="width:100% " class="table table-bordered table-striped">
+            <thead>
+                <tr style="color:rgb(0, 0, 100);">
+                    <th>Year</th>
+                    <th>Original Paper</th>
+                    <th>Official Keys</th>
+                </tr>
+                <tr>
+                    <tr>
+                        <td rowspan="2">2020</td>
+                        <td><a href="https://drive.google.com/open?id=1e5moLO0FOU1XYJsmrOgPfM20NyrnITA-" target="_blank">2020 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=194B216FU2SplG-sPH5yYJiimviQEyLzX" target="_blank">2020 Keys</a></td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2019</td>
+                        <td> <a href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190220120422/2019_CS_Paper.pdf" target="_blank">2019 Paper</a> </td>
+                        <td> <a href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190313151559/2019-Keys.pdf" target="_blank">2019 Keys</a> </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <tr>
+                        <td rowspan="2">2018</td>
+                        <td><a href="https://drive.google.com/open?id=1CcOpvMbmoneCockBJxqsuyrcFzVjlyhZ" target="_blank">2018 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=1-Hhl9QJlTYyjU6lzO8GhdXxURZnhH_3S" target="_blank">2018 Keys</a></td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2017</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iZFd0TU9lVDhPbDA" target="_blank">2017 Set 1 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6idWNtSXViMkktZUk" target="_blank">2017 Set 1 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iT2xGMVlKOWYxS3c" target="_blank">2017 Set 2 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iRWtITmVGSmtDVXM" target="_blank">2017 Set 2 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2016</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iRTdoUkRBc0FadE0" target="_blank">2016 Set 1 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6ibllBempRcGxaUDg" target="_blank">2016 Set 1 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iZWVHYTB5eUpsMGc" target="_blank">2016 Set 2 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6icTdzZmgxb3lieWM" target="_blank">2016 Set 2 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">2015</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iZHZWanRYR2pPazA" target="_blank">2015 Set 1 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6ia0d4NWIzZXJETHc" target="_blank">2015 Set 1 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iTTdhOTFzVzFHQzQ" target="_blank">2015 Set 2 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iRm9XZng2ZjVxUDg" target="_blank">2015 Set 2 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iaTZhaEE4OEZOTGs" target="_blank">2015 Set 3 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iVDZzU2tDazJxSDQ" target="_blank">2015 Set 3 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">2014</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6idm50dHo3TnByTXc" target="_blank">2014 Set 1 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6idFRGMnBNbFFiTk0" target="_blank">2014 Set 1 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6ieXF2ckxoM1hBWm8" target="_blank">2014 Set 2 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iakVhT1ZNU0ozMjg" target="_blank">2014 Set 2 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iRnliMDlMT2o2T2M" target="_blank">2014 Set 3 Paper</a></a>
+                        </td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iNHJOMGJQOHFFMHc" target="_blank">2014 Set 3 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td>2013</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iM2x5blMwS2lBZDA" target="_blank">2013 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iLXpKLTZBWWU4dEk" target="_blank">2013 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iLTFlM2FTT0ZLclk" target="_blank">2012 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6ieVRSZ29TRmozd0U" target="_blank">2012 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td>2011</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6icXVwZFhaS0hLRE0" target="_blank">2011 Paper</a></td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iRExmTEVmRlgzNWc" target="_blank">2011 Keys</a></td>
+                    </tr>
+                    <tr>
+                        <td>2010</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6ieWhEdmd6SUx2aXM" target="_blank">2010 Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2009</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iaWJ1dkhWNW5GU1E" target="_blank">2009 Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2008</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iQzlId2JoZFU0SUE" target="_blank">2008 CS Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6idnFFSHZJNlRTTXM" target="_blank">2008 IT Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2007</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6ieWVRX09mSXBiTXc" target="_blank">2007 CS Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iZjFCeFdSS0otbG8" target="_blank">2007 IT Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2006</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iNFRmcGpyVlRSV00" target="_blank">2006 CS Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iTnhPYkYxTFdZdEE" target="_blank">2006 IT Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2005</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iYmNTeHVWUnZYQVE" target="_blank">2005 CS Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iMDBnNkFSd3ItNTA" target="_blank">2005 IT Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2004</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iaVFReHFuNWVpYXc" target="_blank">2004 CS Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iWThFRTdydHRwc1U" target="_blank">2004 IT Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2003</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iTV9yRjFWRmFyYW8" target="_blank">2003 Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2002</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iOFJjUVBVNXZLVzA" target="_blank">2002 Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2001</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6iQmZhdXpuMWlWTmc" target="_blank">2001 Paper</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2000</td>
+                        <td><a href="https://drive.google.com/open?id=0By-VZ5fZo_6icDlPRTFiUlN2M2c" target="_blank">2000 Paper</a></td>
+                        <td></td>
+                    </tr>
+
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".navbar-toggler").on("click", function() {
+                $(".mobileMenu").toggleClass("open");
+            })
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav .act {
+            background: none;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_1.html">
+                    <li class="act">Introduction to Automata theory</li>
+                </a>
+                <a href="Topic_2.html">
+                    <li>Finite Automata</li>
+                </a>
+                <a href="Topic_3.html">
+                    <li>Moore Machine</li>
+                </a>
+                <a href="Topic_4.html" class="active">
+                    <li>Mealy Machine</li>
+                </a>
+                <a href="Topic_5.html">
+                    <li>Conversion of moore to mealy machine</li>
+                </a>
+                <a href="Topic_6.html">
+                    <li>Conversion of mealy to moore machine</li>
+                </a>
+                <a href="quiz.html">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div>
+            <div class="title4"><strong style="font-size: xx-large;">Mealy Machine</strong></div><br>
+            <p class="p4">
+                <ul>
+                    <li>
+                        A Mealy machine is a machine in which output symbol depends upon the present input symbol and present state of the machine.
+                    </li>
+                    </br>
+                    <li>
+                        In the Mealy machine, the output is represented with each input symbol for each state separated by /.
+                    </li>
+                    </br>
+                    <li>
+                        The Mealy machine can be described by 6 tuples (Q, q0, ∑, O, δ, λ') where
+                    </li><br>
+                    <ul>
+                        <li> Q: finite set of states</li><br>
+                        <li>
+                            q0: initial state of machine
+                        </li><br>
+                        <li> ∑: finite set of input alphabet
+                        </li><br>
+                        <li>
+                            O: output alphabet
+                        </li><br>
+                        <li> δ: transition function where Q × ∑ → Q   </li><br>
+                        <li> λ': output function where Q × ∑ →O</li><br>
+                    </ul>
+                </ul>
+                <h2>EXAMPLE 1</h2><br>
+                <p><strong>Q.</strong>&nbsp; &nbsp;Design a Mealy machine for a binary input sequence such that if it has a substring 101, the machine output A, if the input has substring 110, it outputs B otherwise it outputs C.<br>
+                </p><br>
+                <p><strong>SOLUTION.</strong>&nbsp; &nbsp;Solution: For designing such a machine, we will check two conditions, and those are 101 and 110. If we get 101, the output will be A. If we recognize 110, the output will be B. For other strings the
+                    output will be C.
+                </p><br>
+                <p>
+                    The partial diagram will be:<br><br>
+                    <img src="../../../images/automataex1.png">
+                </p><br><br>
+                <p>
+                    Now we will insert the possibillities of 0<sup>'</sup>s and 1<sup>'</sup>s for each state.Thus the mealy machine become:<br><br>
+                    <img src="../../../images/automataex2.png">
+                </p>
+
+        </div>
+    </div>

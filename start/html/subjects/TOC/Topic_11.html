@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AlgoDaddy</title>
+
+    <link rel="stylesheet" href="../../../CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../page.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+    <style>
+        .side_nav {
+            width: 200px;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+        
+        .side_nav a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        .side_nav a.active {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        .side_nav a:hover:not(.active) {
+            background-color: rgb(134, 134, 235);
+            color: white;
+        }
+        
+        div.content {
+            margin-left: 250px;
+            padding: 40px 36px;
+        }
+    </style>
+
+
+</head>
+<link rel="stylesheet" href="">
+
+<body>
+    <div class="menu-bar">
+        <div class="menu-bar-middle">
+            <ul>
+                <li id="logo"><a href="#"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a></li>
+                <li><a href="#"><i class="fa fa-clone"></i>Categories</a>
+                    <div class="sub-menu-1">
+                        <ul>
+
+                            <li class="hover-me"><a href="#">College Course</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="../../college/first_year.html">First Year</a></li>
+                                        <li><a href="../../college/second_year.html">Second Year</a></li>
+                                        <li><a href="../../college/third_year.html">Third Year</a></li>
+                                        <li><a href="../../college/fouth_year.html">Fourth Year</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Extras</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">App Development</a></li>
+                                        <li><a href="#">Web Development</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="hover-me"><a href="#">Language</a><i class="fa fa-angle-right"></i>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="#">C</a></li>
+                                        <li><a href="#">C++</a></li>
+                                        <li><a href="#">Java</a></li>
+                                        <li><a href="#">Python</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-graduation-cap"></i>Placements</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Microsoft</a></li>
+                            <li><a href="#">Wipro</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i><br>Exams&nbsp;/&nbsp;Quiz</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="#">Gate</a></li>
+                            <li><a href="#">Mission</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fa fa-user"></i><br>About&nbsp;Us</a></li>
+            </ul>
+        </div>
+        <span><a href="#"><img src="../../../images/user.png"></a></span>
+    </div>
+    <div class="wrapper clearfix">
+        <div class="side_nav">
+            <ul>
+                <a href="Topic_8.html">
+                    <li> Non Deterministic Finite Automata (NFA)</li>
+                </a>
+                <a href="Topic_9.html">
+                    <li>Deterministic finite automata machines(DFA)</li>
+                </a>
+                <a href="Topic_10.html">
+                    <li>conversion of NFA to DFA</li>
+                </a>
+                <a href="Topic_11.html" class="active">
+                    <li>minimization of automata machines</li>
+                </a>
+                <a href="Topic_12.html">
+                    <li>regular expression</li>
+                </a>
+                <a href="Topic_13.html">
+                    <li>Arden’s theorem</li>
+                </a>
+                <a href="#">
+                    <li>Practice / Quiz</li><br><br><br>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content1">
+            <h1 class="h1">Minimization of DFA</h1><br>
+            <p>Minimization of DFA means reducing the number of states from given FA. Thus, we get the FSM(finite state machine) with redundant states after minimizing the FSM.</p><br>
+            <p>We have to follow the various steps to minimize the DFA. These are as follows:</p><br>
+            <p><strong>Step 1:</strong> Remove all the states that are unreachable from the initial state via any set of the transition of DFA.</p><br>
+            <p><strong>Step 2:</strong> Draw the transition table for all pair of states.</p><br>
+            <p><strong>Step 3:</strong> Now split the transition table into two tables T1 and T2. T1 contains all final states, and T2 contains non-final states.</p><br>
+            <p><strong>Step 4:</strong> Find similar rows from T1 such that:</p><br>
+            <div class="codeblock">
+                <p>
+                    1. &delta; (q, a) = p 2. &delta; (r, a) = p
+                </p>
+            </div><br>
+            <p>That means, find the two states which have the same value of a and b and remove one of them.</p><br>
+            <p><strong>Step 5:</strong> Repeat step 3 until we find no similar rows available in the transition table T1.</p><br>
+            <p><strong>Step 6:</strong> Repeat step 3 and step 4 for table T2 also.</p><br>
+            <p><strong>Step 7:</strong> Now combine the reduced T1 and T2 tables. The combined transition table is the transition table of minimized DFA.</p><br>
+            <h3 class="h3">Example:</h3><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/minimization-of-dfa.png" alt="Minimization of DFA" /><br>
+            <p><strong>Solution:</strong></p>
+            <p><strong>Step 1:</strong> In the given DFA, q2 and q4 are the unreachable states so remove them.</p><br>
+            <p><strong>Step 2:</strong> Draw the transition table for the rest of the states.</p><br>
+            <table class="alt">
+                <tr>
+                    <th>State</th>
+                    <th>0</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <td>&rarr;q0</td>
+                    <td>q1</td>
+                    <td>q3</td>
+                </tr>
+                <tr>
+                    <td>q1</td>
+                    <td>q0</td>
+                    <td>q3</td>
+                </tr>
+                <tr>
+                    <td>*q3</td>
+                    <td>q5</td>
+                    <td>q5</td>
+                </tr>
+                <tr>
+                    <td>*q5</td>
+                    <td>q5</td>
+                    <td>q5</td>
+                </tr>
+            </table><br>
+            <p><strong>Step 3:</strong> Now divide rows of transition table into two sets as:</p><br>
+            <p>1. One set contains those rows, which start from non-final states:</p><br>
+            <table class="alt">
+                <tr>
+                    <th>State</th>
+                    <th>0</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <td>q0</td>
+                    <td>q1</td>
+                    <td>q3</td>
+                </tr>
+                <tr>
+                    <td>q1</td>
+                    <td>q0</td>
+                    <td>q3</td>
+                </tr>
+            </table><br>
+            <p>2. Another set contains those rows, which starts from final states.</p><br>
+            <table class="alt">
+                <tr>
+                    <th>State</th>
+                    <th>0</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <td>q3</td>
+                    <td>q5</td>
+                    <td>q5</td>
+                </tr>
+                <tr>
+                    <td>q5</td>
+                    <td>q5</td>
+                    <td>q5</td>
+                </tr>
+            </table><br>
+            <p><strong>Step 4:</strong> Set 1 has no similar rows so set 1 will be the same.</p>>br>
+            <p><strong>Step 5:</strong> In set 2, row 1 and row 2 are similar since q3 and q5 transit to the same state on 0 and 1. So skip q5 and then replace q5 by q3 in the rest.</p><br>
+            <table class="alt">
+                <tr>
+                    <th>State</th>
+                    <th>0</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <td>q3</td>
+                    <td>q3</td>
+                    <td>q3</td>
+                </tr>
+            </table><br>
+            <p><strong>Step 6:</strong> Now combine set 1 and set 2 as:</p><br>
+            <table class="alt">
+                <tr>
+                    <th>State</th>
+                    <th>0</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <td>&rarr;q0</td>
+                    <td>q1</td>
+                    <td>q3</td>
+                </tr>
+                <tr>
+                    <td>q1</td>
+                    <td>q0</td>
+                    <td>q3</td>
+                </tr>
+                <tr>
+                    <td>*q3</td>
+                    <td>q3</td>
+                    <td>q3</td>
+                </tr>
+            </table><br>
+            <p><strong>Now it is the transition table of minimized DFA.</strong></p><br>
+            <img src="https://static.javatpoint.com/tutorial/automata/images/minimization-of-dfa2.png" alt="Minimization of DFA" /><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

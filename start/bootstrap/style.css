@@ -1,0 +1,14 @@
+@media (max-width:992px) {
+    .mobileMenu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 0;
+        transform: translate(-100%);
+        transition: all ease 0.25s;
+    }
+    .open {
+        transform: translateX(0);
+    }
+}

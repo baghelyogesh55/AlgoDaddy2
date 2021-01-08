@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Add Address</title>
+    <style>
+        .header h5 {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .logo {
+            margin-top: -10px;
+            padding-left: 42%;
+            padding-top: 20px;
+            height: 100px;
+        }
+        
+        #ist {
+            color: black;
+            font-size: 35px;
+            font-weight: bold;
+            margin-left: 15px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        #iist {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .navbar .collapse ul li {
+            margin: 1px;
+            padding: 5px;
+        }
+        
+        .navbar .collapse a {
+            font-weight: 500;
+            font-size: 15px;
+            margin: 5px;
+            padding: 4px;
+            color: white;
+        }
+        
+        .navbar .collapse a:hover {
+            transition: 0.5s ease-out;
+            color: yellow;
+            background-color: grey;
+            font-size: 20px;
+            text-shadow: hotpink;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h5>USER FRINDLY SHOPPING</h5>
+    </div>
+    <div class="logo">
+        <i class="fa fa-shopping-cart fa fa-3x" aria-hidden="true"></i> <span id="ist">WEB</span>
+        <span id="iist" style="color: red;">Shop.</span>
+        <span id="iist" style="color:blue;">com</span>
+
+    </div>
+    <nav class="navbar navbar-expand-lg  bg-dark">
+        <a class="navbar-brand" href="#"><span style="color:black">Web</span><span style="color:red">shoP</span>.<span style="color:skyblue;">com</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span style="color:white;"class="navbar-toggler-icon">+</span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="e-commerce.html">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pro.jsp">PRODUCTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="help.html">HELP</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               LOOKING FOR
+              </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item bg-dark" href="#">MEN</a>
+                        <a class="dropdown-item bg-dark" href="#">WOMEN</a>
+
+                        <a class="dropdown-item bg-dark" href="#">KIDS</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container">
+        <h3 style="text-align: center;font-size: 18px;"><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;Fill Billing Address</h3>
+        <form action="#" method="post">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+            <label for="add1">Address Line 1</label>
+            <input type="text" id="add1" name="add1" placeholder="Enter Address Line 1..." required>
+            <label for="add2">Address Line 2</label>
+            <input type="text" id="add2" name="add2" placeholder="Enter Addess Line 2..." required>
+
+            <label for="pincode">Pin Code</label>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter pincode..." required>
+            <label for="cty">City</label>
+            <input type="text" id="cty" name="cty" placeholder="Enter City..." required>
+            <label for="state">State</label>
+            <select id="state" name="state" required>
+      <option value="Andhra Pradesh">Andhra Pradesh</option>
+      <option value="Assam">Assam</option>
+      <option value="Bihar">Bihar</option>
+      <option value="Chandigarh">Chandigarhr</option>
+      <option value="Chhattisgarh">Chhattisgarh</option>
+      <option value="Dehli">Dehli</option>
+      <option value="Goa">Goa</option>
+      <option value="Gujrat">Gujrat</option>
+      <option value="Haryana">Haryana</option>
+      <option value="Jharkhand">Jharkhand</option>
+      <option value="Kerala">Kerala</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Maharashtra">Maharashtra</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Rajasthan">Rajasthan</option>
+      <option value="Tamil Nadu">Tamil Nadu</option>
+      <option value="Uttar Pradesh">Uttar Pradesh</option>
+      
+    </select>
+            <label for="phn">Phone</label>
+            <input type="text" id="phn" name="phn" placeholder="Enter Phone..." required>
+            <label for="eml">Email</label>
+            <input type="text" id="eml" name="eml" placeholder="Enter Email..." required>
+
+            <label for="pid">Product Id</label>
+            <small class="form-text text-muted">Add Different Id's With Commas(,)</small>
+            <input type="text" id="pid" name="pid" placeholder="Product Id..." required width="50%">
+
+            <label for="pqty">Product Quantity</label>
+            <small class="form-text text-muted">Add Different Product Id's With Commas(,)</small>
+            <input type="text" id="pqty" name="qty" placeholder="Product Quantity..." required width="50%"><br>
+
+            <button class="btn-lg btn-outline-success " value="Submit">Submit</button>
+
+        </form>
+    </div>
+    <hr>
+    <h3 style="text-align: center;">You Can See Your Products By Clicking Base Buttons</h3>
+</body>
+
+</html>

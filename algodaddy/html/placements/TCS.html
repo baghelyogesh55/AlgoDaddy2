@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="htmlcss bootstrap menu, navbar, mega menu examples" />
+    <meta name="description" content="Navigation  menu with submenu examples for any type of project, Bootstrap 4" />
+
+    <title>TCS</title>
+    <link rel="icon" href="../../images/logo.svg" type="image/gif">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/placeholder.css" type="text/css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <script src="../../js/firebase.js"></script>
+
+
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function() {
+            // jQuery code
+
+            //////////////////////// Prevent closing from click inside dropdown
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation();
+            });
+
+            // make it as accordion for smaller screens
+            if ($(window).width() < 992) {
+                $('.dropdown-menu a').click(function(e) {
+                    e.preventDefault();
+                    if ($(this).next('.submenu').length) {
+                        $(this).next('.submenu').toggle();
+                    }
+                    $('.dropdown').on('hide.bs.dropdown', function() {
+                        $(this).find('.submenu').hide();
+                    })
+                });
+            }
+
+        }); // jquery end
+    </script>
+
+    <style>
+        body {
+            background: lavender;
+        }
+        
+        .mystyle {
+            color: #00539CFF;
+        }
+        
+        #myimg {
+            width: 100%;
+            height: 20%;
+            overflow: hidden;
+        }
+        
+        @media (max-width:600px) {
+            #myimg {
+                overflow: hidden;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark justify-content-sm-start fixed-top">
+        <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 mr-auto " href="../../index.html"><i class="fas fa-ad">&nbsp;AlgoDaddy</i></a>
+        <button class="navbar-toggler align-self-start" id="btnToggle" type="button" data-toggle="collapse" data-target="#main_nav">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end  p-3 p-lg-0 mt-5 mt-lg-0 mobileMenu" id="main_nav">
+
+            <ul class="navbar-nav mr-auto align-self-stretch">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i><span> Categories</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">College Course &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="../college/first_year.html">First Year</a></li>
+                                <li><a class="dropdown-item" href="../college/second_year.html">Second Year</a></li>
+                                <li><a class="dropdown-item" href="../college/third_year.html"> Third Year</a></li>
+                                <li><a class="dropdown-item" href="../college/fourth_year.html"> Fourth Year</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Extra &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">App Development</a></li>
+                                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Languages &raquo</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="#">C</a></li>
+                                <li><a class="dropdown-item" href="#">C++</a></li>
+                                <li><a class="dropdown-item" href="#">Java</a></li>
+                                <li><a class="dropdown-item" href="#">Python</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-graduation-cap"></i><span> Placements</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Interview Tips.html">Interview Tips</a></li>
+                        <li><a class="dropdown-item" href="HR Interview Questions.html">HR Interview Questions</a></li>
+                        <li><a class="dropdown-item" href="#">TCS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <i class="fa fa-book"></i><span> Exams</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../exams/gate.html">Gate</a></li>
+                        <li><a class="dropdown-item" href="#">CAT</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  text-white" href="../about/aboutUs.html">
+                        <i class="fa fa-user"></i><span> About Us</span></a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav navbar-right" id="loginul">
+                <li class="nav-item profileSignIn">
+                    <a class="nav-link text-white" href="../login/login.html?#"><img src="../../images/user2.png" height="40px" width="40px" />Sign In</a>
+                </li>
+                <li class="nav-item dropdown profileName" style="display: none;">
+                    <a class="nav-link dropdown-toggle text-white" href="#" data-toggle="dropdown">
+                        <!-- <h3> Login</h3> -->
+                        <img id="userPic" height="40px" width="40px" />
+                        <span id="userName"> Name</span></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="../login/profile.html">My Profile</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="Logout();">Logout</a></li>
+                    </ul>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="container-fluid mt-2 pb-5 pl-0 pr-0 mr-0 ml-0">
+        <div class="container-fluid img-fluid pl-0 pr-0 ml-0 mr-0 mb-2">
+            <a href="https://www.tcs.com/careers?country=IN&lang=EN"><img id="myimg" src="../../images/placements/tcs1jpg.jpg"></a>
+        </div>
+        <div class="container-fluid m-2">
+            <h2>TCS Campus Selection Process: All you need to know about</h2>
+            <p>Employing well over 3 lakh people in 46 countries, Tata Consultancy Services (TCS) carries out recruitment drives across reputed colleges in India to select the best and brightest young talent and offer them an opportunity to work with the
+                company.
+                <br> With countless applicants vying for jobs, candidates are required to go through a three-stage selection process involving elimination after every round.<br> Here’s all you need to know about the campus selection process at TCS:
+            </p>
+
+            <h4>Application & eligibility</h4>
+            <p>Recruitment through the campus recruitment channel is among the easiest ways to find employment with TCS since you are only competing against your peers.</p>
+            <p> To apply, a candidate must have a minimum aggregate of 60% in all exams since Class X in the first attempt. A maximum of one pending backlog in the highest qualification is permitted at the time of applying which should be cleared if selected.
+                Only those candidates that have graduated from full-time courses are eligible; minimum age criteria is 18 years; applicants with more than three years work experience are not eligible for these placements; and gap in education or employment,
+                if applicable, must not exceed two years and should be accompanied by a valid reason.</p>
+
+            <h4>Aptitude Test</h4>
+            <p>It consists of four rounds:<br> a. email writing (1 question, 10 minutes)<br>b. quantitative ability and reasoning ability (20 questions, 40 minutes)<br>c. programming language efficiency (10 questions, 20 minutes)<br>d. coding test (1 question,
+                20 minutes)</p>
+
+            <h4>Email Writing</h4>
+            <p>You will be given instructions and a set of keywords. Follow the exact directions, and use all the keywords in the same order as listed in the question. Omit all unnecessary details from your email. Your answer should be a minimum of 50 words;
+                the ideal length is 70-80 words.</p>
+            <p>Sometimes, the word length is mentioned in the question. Avoid spelling errors and typos, big words and complex sentences, keep the writing crisp and to the point, and remember to use accepted norms for salutation and signing off.</p>
+
+            <h4>Analytical Reasoning</h4>
+            <p>This section tests your quantitative and reasoning ability. Time management is critical. Try and solve the easy questions first before attempting the difficult ones. There are certain ‘star’ questions that carry more marks; don’t get stuck
+                on these unless you are confident of solving them quickly since it could upset your time management. Instead, return after solving the easy questions.</p>
+
+            <h4>Programming Language Efficiency</h4>
+            <p>This is a new round introduced by TCS where candidates must answer 10 multiple choice questions on C language based on basic programming concepts.</p>
+
+            <h4>Coding Test</h4>
+            <p>This test is of the Command Line Programming type where candidates are required to solve one programming question in 20 minutes in C language using an inbuilt online compiler. Prepare for basic programs like leap year GCD, Fibonacci series,
+                HCF, LCM, odd/ even series, etc.</p>
+
+            <h4>Personal Interviews</h4>
+            <p>This includes three rounds—technical, managerial and HR. The managerial round may be omitted depending on the discretion of the employers.</p>
+
+            <h4>Technical Round</h4>
+            <p>Choose two domains or technologies as your specialization and study them in depth including new versions and updates. Cover the general programming concepts. Knowledge of C language is a plus. Be prepared for detailed questions on the projects
+                you’ve worked on. You could also be asked to write programs during the interview.</p>
+
+            <h4>Managerial Round</h4>
+            <p>This is a stress interview intended to gauge your response to a pressure situation. Expect brain teasers, deliberate efforts to confound you, skepticism, and emotional intimidation. Much depends on your interviewer.</p>
+
+            <h4>HR Round</h4>
+            <p>This is where they assess things like your attitude and fitment in the company, apart from informing you about the terms and conditions of employment. Expect standard HR questions on why you want to join the company, why you think you’re a
+                better choice than other candidates, your strengths and weaknesses, apart from behavioral questions.</p>
+
+            <p>In the interview rounds, remember that you are constantly being judged on your confidence, personality, and soft skills, so remain calm and make an effort to be pleasant even if you are under strain. For more information on handling the interview,
+                click on this <a href="Interview Tips.html">link</a>.</p>
+
+            <p>While the recruitment process may seem quite rigorous, a few weeks of preparation could give you a good shot at getting selected. So prepare well and apply. It could be an ideal launch pad for your career!</p>
+
+            <a href="TCS Interview Questions.html">
+                <h5>TCS Interview Questions</h5>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $(".navbar-toggler").on("click", function() {
+                $(".mobileMenu").toggleClass("open");
+            })
+        });
+    </script>
+    <!-- <script src="../login/login.js"></script> -->
+</body>
+
+</html>
